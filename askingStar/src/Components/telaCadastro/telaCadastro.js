@@ -6,7 +6,7 @@ const TelaCadastro = ({navigation}) => {
 
     const styles = StyleSheet.create({
         stylebutton:{
-            backgroundColor: 'red',
+            backgroundColor: 'white',
             borderRadius: 5
     }}
 
