@@ -1,4 +1,5 @@
-import { View, Picker, Text, ImageBackground, StyleSheet} from "react-native";
+import { View, Text, ImageBackground, StyleSheet} from "react-native";
+import { Picker } from "@react-native-picker/picker";
 import Inputcomponent from "../inpurtCompenent";
 import Buttoncomponent from "../buttonComponent";
 
@@ -43,7 +44,7 @@ const TelaCadastro = ({navigation}) => {
         </View>
         <View>
         <Picker >
-          <Picker.Item label="IFAL-AEROPORT" value="AEROPORT" />
+          <Picker.Item label="IFAL-AIRPORT" value="AEROPORT" />
           <Picker.Item label="IFAL-MCZ" value="MCZ" />
         </Picker>
         </View>
