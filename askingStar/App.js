@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ImageBackground, Button, Text, TextInput, StyleSheet, View , Image} from 'react-native';
 import Telalogin from './src/Components/telaLogin/tela';
@@ -14,8 +15,12 @@ const App = () => {
     
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Cadastro" component={TelaCadastro} />
-        <Stack.Screen name="Login" component={Telalogin} />
+
+        <Stack.Screen name="CADASTRO" component={TelaCadastro} />
+
+
+        <Stack.Screen name="ENTRAR" component={Telalogin} />
+        
       </Stack.Navigator>
     </NavigationContainer>
 

@@ -87,6 +87,4 @@ const Telalogin = () => {
 
 
 };
-
-
-    export default Telalogin;
+ export default Telalogin;

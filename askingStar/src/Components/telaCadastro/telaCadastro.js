@@ -6,11 +6,9 @@ const TelaCadastro = ({navigation}) => {
 
     const styles = StyleSheet.create({
         stylebutton:{
-            backgroundColor: 'white',
+            backgroundColor: '#0B0B5B',
             borderRadius: 5
     }}
-
-
 
     )
 
@@ -18,16 +16,17 @@ const TelaCadastro = ({navigation}) => {
  
     <View style={{flex: 1}}>
         
-           <ImageBackground style= {{flex: 1}} source={require('../../../img/ASKING.svg')} resizeMode='cover' > 
-      <View style= {{ gap: 10, justifyContent: 'center', flex: 1, alignItems: 'center' }}>
+          <ImageBackground style= {{flex: 1}} source={require('../../../img/ASKING.svg')} resizeMode='cover' > 
+      <View style= {{ gap: 10, justifyContent: 'center', flex: 1, alignItems: 'center', backgroundColor: 'black' }}>
         <View ><Text style={{textAlign: 'center', color: 'white'}}>CADASTRO</Text></View>
         <View>
-            <Text style={{color: 'white'}}>Seu Email</Text>
+            <Text style={{ color: 'white'
+          }}>Seu Email</Text>
         <Inputcomponent placeholder="Email" />
         </View>
         <View>
         <Text style={{color: 'white'}}>Seu Nome</Text>
-        <Inputcomponent placeholder="Nome" />
+        <Inputcomponent placeholder= "Nome" />
         </View>
         <View>
         <Text style={{color: 'white'}}>Seu Numero De Telefone</Text>
@@ -47,7 +46,7 @@ const TelaCadastro = ({navigation}) => {
           <Picker.Item label="IFAL-MCZ" value="MCZ" />
         </Picker>
         </View>
-        <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('Login')} />
+        <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('ENTRAR')} />
 
 
 
