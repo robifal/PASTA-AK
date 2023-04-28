@@ -10,9 +10,6 @@ const TelaCadastro = ({navigation}) => {
             backgroundColor: 'white',
             borderRadius: 5
     }}
-
-
-
     )
 
   return (
