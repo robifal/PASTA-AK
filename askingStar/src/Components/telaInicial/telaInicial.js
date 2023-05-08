@@ -25,3 +25,6 @@ const TelaInicial =({navigation}) => {
  </View>
     );
 }
+
+
+export default TelaInicial;
