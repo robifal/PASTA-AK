@@ -47,7 +47,7 @@ const TelaInicial = ({navigation}) => {
             marginHorizontal: 10,
             borderRadius: 5,
           }}>
-          <Button color="none" title="Conectar"/>
+          <Button color="" title="Conectar"/>
         </View>
         <Text style={{ color: 'skyblue', marginHorizontal: 10 }}>
           Esqueceu a senha?
