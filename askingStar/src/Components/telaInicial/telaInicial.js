@@ -41,7 +41,7 @@ const TelaInicial = ({navigation}) => {
             borderRadius: 5,
           }}>
 
-          <ButtonIcomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('Jogar')} />
+          <ButtonIcomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('CADASTRO')} />
     </View>   
     <Separator/>
     <View
