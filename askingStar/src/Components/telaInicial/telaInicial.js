@@ -1,30 +1,63 @@
-import * as React from 'react';
-import { Modal, Portal, Text, Button, Provider } from 'react-native-paper';
-import Buttoncomponent from '../buttonComponent';
+import React, { useState } from 'react';
+import { Button, Text,  View , StyleSheet} from 'react-native';
 
-const TelaInicial =({navigation}) => {
+const App = () => {
 
-    const styles = StyleSheet.create({
-        stylebutton:{
-            backgroundColor: 'white',
-            borderRadius: 5
-    }}
-    )
-
-    return (
-
-        <View style={{flex: 1}}>
-            <ImageBackground style= {{flex: 1}} source={require('../../../img/background-ask.png')} resizeMode='cover' ></ImageBackground>
-            <View style= {{ gap: 10, justifyContent: 'center', flex: 1, alignItems: 'center' }}>
-   <View>
-   <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('Login')} />
-    </View> 
+  const Separator = () => <View style={styles.separator} />
 
 
-</View>
- </View>
-    );
-}
+  
+  const styles = StyleSheet.create({
+    separator:{
+      margin: 10,
+    }
+  })
 
+  return (
+    <View
+      style={{
+        color: 'white',
+        flex: 1,
+        backgroundColor: '#070719',
+        padding: '',
+      }}>
+     
+      <View
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignitems: 'center',
+          flex: 1,
+        }}>
+       
+        <View
+          style={{
+            backgroundColor: '#0B0B3B',
+            marginHorizontal: 10,
+            borderRadius: 5,
+          }}>
+          <Button color="none" title="Jogar" />
+    </View>   
+    <Separator/>
+    <View
+          style={{
+            backgroundColor: '#0B0B3B',
+            marginHorizontal: 10,
+            borderRadius: 5,
+          }}>
+          <Button color="none" title="Conectar"/>
+        </View>
+        <Text style={{ color: 'skyblue', marginHorizontal: 10 }}>
+          Esqueceu a senha?
+        </Text>
+        <Text style={{ color: 'skyblue', marginHorizontal: 10 }}>
+          Cadastre-se{' '}
+        </Text>
+      </View>
+    
+    </View>
 
-export default TelaInicial;
+  );
+};
+
+export default App;

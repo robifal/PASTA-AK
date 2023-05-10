@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { ImageBackground, Button, Text, TextInput, StyleSheet, View , Image} from 'react-native';
-import TelaInicial from '.scr/Components/TelaInicial/telaInicial';
+import TelaInicial from './scr/Components/telaInicial/telaInicial';
 import Telalogin from './src/Components/telaLogin/tela';
 import TelaCadastro from './src/Components/telaCadastro/telaCadastro';
 import { NavigationContainer } from '@react-navigation/native';
