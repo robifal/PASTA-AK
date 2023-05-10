@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Text,  View , StyleSheet} from 'react-native';
+import ButtonIcomponent from '../buttonIComponent';
 
-const App = () => {
+const TelaInicial = ({navigation}) => {
 
   const Separator = () => <View style={styles.separator} />
 
@@ -36,7 +37,8 @@ const App = () => {
             marginHorizontal: 10,
             borderRadius: 5,
           }}>
-          <Button color="none" title="Jogar" />
+
+          <ButtonIcomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('Jogar')} />
     </View>   
     <Separator/>
     <View
@@ -60,4 +62,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default TelaInicial;
