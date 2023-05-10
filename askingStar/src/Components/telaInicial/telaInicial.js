@@ -20,7 +20,7 @@ const TelaInicial = ({navigation}) => {
         color: 'white',
         flex: 1,
         backgroundColor: '#070719',
-        padding: '',
+        padding: 5,
       }}>
      
       <View

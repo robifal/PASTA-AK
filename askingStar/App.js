@@ -1,6 +1,4 @@
 
-import React, { useState } from 'react';
-import { ImageBackground, Button, Text, TextInput, StyleSheet, View , Image} from 'react-native';
 import TelaInicial from './src/Components/telaInicial/telaInicial';
 import Telalogin from './src/Components/telaLogin/tela';
 import TelaCadastro from './src/Components/telaCadastro/telaCadastro';
@@ -18,8 +16,8 @@ const App = () => {
       <Stack.Navigator>
 
       <Stack.Screen name='INICIAL' component={TelaInicial} />
-        <Stack.Screen name="CADASTRO" component={TelaCadastro} />
-        <Stack.Screen name="ENTRAR" component={Telalogin} />
+        {/* <Stack.Screen name="CADASTRO" component={TelaCadastro} />
+        <Stack.Screen name="ENTRAR" component={Telalogin} /> */}
 
 
       </Stack.Navigator>
