@@ -15,7 +15,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
 
-        <Stack.Screen name='INICIAL' component={TelaInicial} />
+       <Stack.Screen name='INICIAL' component={TelaInicial} />
         
         <Stack.Screen name="CADASTRO" component={TelaCadastro} />
         
