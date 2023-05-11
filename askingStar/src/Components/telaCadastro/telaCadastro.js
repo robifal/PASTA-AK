@@ -45,7 +45,6 @@ const TelaCadastro = ({navigation}) => {
           <Picker.Item label="IFAL-MCZ" value="MCZ" />
         </Picker>
         </View>
-        <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('ENTRAR')} />
 
 
 
