@@ -46,7 +46,7 @@ const TelaCadastro = ({navigation}) => {
         </Picker>
         </View>
 
-
+       <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('ENTRAR')} /> 
 
       </View>
        </ImageBackground>
