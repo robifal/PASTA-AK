@@ -1,7 +1,6 @@
-
-import TelaInicial from './src/Components/telaInicial/telaInicial';
-import Telalogin from './src/Components/telaLogin/tela';
-import TelaCadastro from './src/Components/telaCadastro/telaCadastro';
+import TelaInicial from './src/pages/telaInicial/telaInicial';
+import Telalogin from './src/pages/telaLogin/tela';
+import TelaCadastro from './src/pages/telaCadastro/telaCadastro';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -12,12 +11,14 @@ const App = () => {
 
   return (
     
-    <NavigationContainer>
-      <Stack.Navigator>
+    <NavigationContainer >
+      <Stack.Navigator 
+      initialRouteName="Cadastro" 
+      >
 
        <Stack.Screen name='INICIAL' component={TelaInicial} />
         
-        <Stack.Screen name="CADASTRO" component={TelaCadastro} />
+        <Stack.Screen name="Cadastro" component={TelaCadastro} />
         
         <Stack.Screen name="ENTRAR" component={Telalogin} />
 

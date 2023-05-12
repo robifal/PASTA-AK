@@ -1,28 +1,42 @@
-import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-import Inputcomponent from "../inpurtCompenent";
-import Buttoncomponent from "../buttonComponent";
+import Inputcomponent from "../../Components/inputComponent";
+import Buttoncomponent from "../../Components/buttonComponent";
+import { StyleSheet, View, ImageBackground, Text } from "react-native";
+import { useState } from 'react'
+
 
 const TelaCadastro = ({ navigation }) => {
 
   const styles = StyleSheet.create({
     stylebutton: {
-      backgroundColor: 'white',
+      backgroundColor: 'black',
       borderRadius: 5
     }
   }
   )
 
+  const [nome, setNome] = useState('')
+  const [email, setEmail] = useState('')
+  const [telefone, setTelefone] = useState('')
+  const [senha, setSenha] = useState('')
+  const [confirmar, setConfirmar] = useState('')
+  console.log(email);
+
+
   return (
 
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: 'gray' }}>
 
-      <ImageBackground style={{ flex: 1 }} source={require('../../../img/ASKING.svg')} resizeMode='cover' >
+      
         <View style={{ gap: 10, justifyContent: 'center', flex: 1, alignItems: 'center' }}>
           <View ><Text style={{ textAlign: 'center', color: 'white' }}>CADASTRO</Text></View>
           <View>
             <Text style={{ color: 'white' }}>Seu Email</Text>
-            <Inputcomponent placeholder="Email" />
+            <Inputcomponent 
+           func = {(text) => {
+            setEmail(text.target.value) 
+           } }           
+           placeholder="Email" />
           </View>
           <View>
             <Text style={{ color: 'white' }}>Seu Nome</Text>
@@ -33,7 +47,7 @@ const TelaCadastro = ({ navigation }) => {
             <Inputcomponent placeholder="Numero Telefone" />
           </View>
           <View>
-            <Text style={{ color: 'white' }}>Coloque Sua Snha</Text>
+            <Text style={{ color: 'white' }}>Coloque Sua Senha</Text>
             <Inputcomponent placeholder="Senha" />
           </View>
           <View>
@@ -50,7 +64,7 @@ const TelaCadastro = ({ navigation }) => {
           <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('ENTRAR')} />
 
         </View>
-      </ImageBackground>
+      
     </View>
 
   );
