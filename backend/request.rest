@@ -1,0 +1,10 @@
+POST http://localhost:3002/api/cadastro
+Content-Type: application/json
+
+
+{
+    "name" : "Algum serviço",
+    "dateYear": "22052004",
+    "email": "pgasfasjhgf@gmail.com",
+    "password": 54244
+}
