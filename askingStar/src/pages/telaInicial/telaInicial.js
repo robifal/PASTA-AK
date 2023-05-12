@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Text,  View , StyleSheet, Image} from 'react-native';
-import ButtonIcomponent from '../buttonIComponent';
+import ButtonIcomponent from '../../Components/buttonIComponent';
 
 
 const image = {}

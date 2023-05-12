@@ -2,7 +2,7 @@ import { TextInput } from "react-native-paper"
 import { StyleSheet } from "react-native"
 
 
-const Inputcomponent = ({placeholder}) => {
+const Inputcomponent = ({placeholder, func, value}) => {
 
     const styles = StyleSheet.create({
         stylebutton:{
@@ -23,6 +23,8 @@ const Inputcomponent = ({placeholder}) => {
             style={styles.stylebutton}
             placeholder={placeholder}
             mode='outlined'
+            onChange={ func }
+            value={value}
             
         />
     )
