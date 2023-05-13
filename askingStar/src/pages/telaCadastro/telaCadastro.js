@@ -23,11 +23,12 @@ const TelaCadastro = ({ navigation }) => {
   console.log(email);
 
 
+
   return (
 
     <View style={{ flex: 1, backgroundColor: 'gray' }}>
 
-      
+      <ImageBackground source={"../img/background-ask.png"} />
         <View style={{ gap: 10, justifyContent: 'center', flex: 1, alignItems: 'center' }}>
           <View ><Text style={{ textAlign: 'center', color: 'white' }}>CADASTRO</Text></View>
           <View>
@@ -40,19 +41,35 @@ const TelaCadastro = ({ navigation }) => {
           </View>
           <View>
             <Text style={{ color: 'white' }}>Seu Nome</Text>
-            <Inputcomponent placeholder="Nome" />
+            <Inputcomponent 
+            func= {(text) => {
+              setNome(text.target.value)
+            } }
+            placeholder="Nome" />
           </View>
           <View>
             <Text style={{ color: 'white' }}>Seu Numero De Telefone</Text>
-            <Inputcomponent placeholder="Numero Telefone" />
+            <Inputcomponent
+            func={(Number) => {
+              setTelefone(Number.target.value)
+            } }
+            placeholder="Numero Telefone" />
           </View>
           <View>
             <Text style={{ color: 'white' }}>Coloque Sua Senha</Text>
-            <Inputcomponent placeholder="Senha" />
+            <Inputcomponent 
+            func={(text) => {
+              setSenha(text.target.value)
+            } }
+            placeholder="Senha" />
           </View>
           <View>
             <Text style={{ color: 'white' }}>Confirmação De Senha</Text>
-            <Inputcomponent placeholder="Confirmar Senha" />
+            <Inputcomponent
+            func={(text) => {
+              setConfirmar(text.target.value)
+            } }
+            placeholder="Confirmar Senha" />
           </View>
           <View>
             <Picker >
