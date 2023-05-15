@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ImageBackground, Button, Text, TextInput, StyleSheet, View , Image} from 'react-native';
-
+import Inputcomponent from "../../Components/inputComponent";
 
 const Telalogin = () => {
     
@@ -27,7 +27,7 @@ const Telalogin = () => {
 
   return (
     <View style={{ color:'white', flex: 1, backgroundColor: '#070730' , padding: ''}}>
-    
+     <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
     <View style={styles.containerImg}> 
        <Image source={require('../../../img/branca.svg')}
            style={
@@ -81,6 +81,7 @@ const Telalogin = () => {
       <View>
       
       </View>
+      </ImageBackground>
     </View>    
 
   );    
