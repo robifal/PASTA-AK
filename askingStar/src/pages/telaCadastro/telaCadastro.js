@@ -20,12 +20,13 @@ const TelaCadastro = ({ navigation }) => {
   const [email, setEmail] = useState('')
   const [telefone, setTelefone] = useState('')
   const [senha, setSenha] = useState('')
-  const [confirmar, setConfirmar] = useState('')
+ 
   console.log(nome)
   console.log(email);
   console.log(telefone);
   console.log(senha);
-  console.log(confirmar);
+  
+
 
 
 
@@ -36,15 +37,22 @@ const TelaCadastro = ({ navigation }) => {
 
     <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
       
-       <View  style={{ alignItems: "center",textAlign: 'center',color: '#0D0C67', backgroundColor:"#E6E6E6", height: "3%", width: "100%", justifyContent: "center", fontSize:"00%", marginTop: Constants.statusBarHeight  }} >
+       <View  style={{ 
+        alignItems: "center",
+        textAlign: 'center',
+        backgroundColor:"#E6E6E6", 
+        height: "3%", 
+        width: "100%", 
+        justifyContent: "center", 
+        marginTop: Constants.statusBarHeight  }} >
             
 
-            <Text>CADASTRO</Text>
+            <Text style={{fontSize:25,fontWeight:"bold" ,color: '#0D0C67' }}>CADASTRO</Text>
           
           </View>
         <View style={{flex: 1,gap: 10, justifyContent: 'center',  alignItems: 'center' }}>
          
-          <View>
+          <View style={{width: "50%"}}>
             <Text style={{ justifyContent:"center" ,color: 'white'}}>Seu Email</Text>
             <Inputcomponent 
            func = {(text) => {
@@ -52,7 +60,7 @@ const TelaCadastro = ({ navigation }) => {
            } }           
            placeholder="Email" />
           </View>
-          <View>
+          <View style={{width: "50%"}}>
             <Text style={{ color: 'white'}}>Seu Nome</Text>
             <Inputcomponent 
             func= {(text) => {
@@ -60,7 +68,7 @@ const TelaCadastro = ({ navigation }) => {
             } }
             placeholder="Nome" />
           </View>
-          <View>
+          <View style={{width: "50%"}}>
             <Text style={{ color: 'white' }}>Seu Numero De Telefone</Text>
             <Inputcomponent
             func={(Number) => {
@@ -69,7 +77,7 @@ const TelaCadastro = ({ navigation }) => {
             mode = "tel"
             placeholder="Numero Telefone" />
           </View>
-          <View>
+          <View style={{width: "50%"}}>
             <Text style={{ color: 'white' }}>Coloque Sua Senha</Text>
             <Inputcomponent 
             func={(text) => {

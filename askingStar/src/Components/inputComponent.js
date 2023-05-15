@@ -11,9 +11,10 @@ const Inputcomponent = ({placeholder, func, value, mode}) => {
             borderRadius: 5,
             color: 'white',
             padding: 2,
-            alignitems: 'center' ,
-            marginHorizontal:0.5
-    }}
+            
+            marginHorizontal:0.5,
+            width: "100%"
+        }}
      
     )
 
