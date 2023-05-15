@@ -5,6 +5,7 @@ import { StyleSheet, View, ImageBackground, Text } from "react-native";
 import { useState } from 'react'
 
 
+
 const TelaCadastro = ({ navigation }) => {
 
   const styles = StyleSheet.create({
@@ -20,17 +21,23 @@ const TelaCadastro = ({ navigation }) => {
   const [telefone, setTelefone] = useState('')
   const [senha, setSenha] = useState('')
   const [confirmar, setConfirmar] = useState('')
+  console.log(nome)
   console.log(email);
+  console.log(telefone);
+  console.log(senha);
+  console.log(confirmar);
 
 
 
   return (
 
-    <View style={{ flex: 1, backgroundColor: 'gray' }}>
 
-      <ImageBackground source={"../img/background-ask.png"} />
+    
+
+    <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
+      
         <View style={{ gap: 10, justifyContent: 'center', flex: 1, alignItems: 'center' }}>
-          <View ><Text style={{ textAlign: 'center', color: 'white' }}>CADASTRO</Text></View>
+          <View ><Text style={{ textAlign: 'top', color: 'white' }}>CADASTRO</Text></View>
           <View>
             <Text style={{ color: 'white' }}>Seu Email</Text>
             <Inputcomponent 
@@ -71,18 +78,13 @@ const TelaCadastro = ({ navigation }) => {
             } }
             placeholder="Confirmar Senha" />
           </View>
-          <View>
-            <Picker >
-              <Picker.Item label="IFAL-AIRPORT" value="AEROPORT" />
-              <Picker.Item label="IFAL-MCZ" value="MCZ" />
-            </Picker>
-          </View>
+
 
           <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('ENTRAR')} />
 
         </View>
-      
-    </View>
+      </ImageBackground>
+        
 
   );
 };
