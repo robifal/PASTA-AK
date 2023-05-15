@@ -4,7 +4,41 @@ Content-Type: application/json
 
 {
     "name" : "Algum serviço",
-    "dateYear": "22052004",
+    "dateYear": "23052004",
     "email": "pgasfasjhgf@gmail.com",
     "password": 54244
 }
+
+###
+
+POST http://localhost:3002/api/cadastros
+
+###
+
+GET http://localhost:3002/api/cadastros/646263927f22761663aefc93
+
+###
+
+GET http://localhost:3002/api/cadastros
+
+###
+
+DELETE http://localhost:3002/api/cadastros/646263927f22761663aefc93
+
+###
+
+PUT  http://localhost:3002/api/cadastro/646263927f22761663aefc44
+Content-Type: application/json
+
+
+{
+    "name" : "TESTE DE ATUALIZAÇÃO!",
+    "dateYear": "23052004",
+    "email": "pgasfasjhgf@gmail.com",
+    "password": 54244
+}
+
+###
+
+POST http://localhost:3002/api/login
+

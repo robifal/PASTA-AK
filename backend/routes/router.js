@@ -1,9 +1,16 @@
 const router = require('express').Router()
 
-// Services router
+// Cadastro router
 
-const cadastroRouter = require("./cadastro")
+const cadastroRouter = require("./cadastro");
 
 router.use('/', cadastroRouter);
+
+// User router
+
+
+const userRouter = require("./users");
+
+router.use('/', userRouter);
 
 module.exports = router

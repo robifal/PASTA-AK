@@ -26,6 +26,4 @@ const CadastroSchema = new Schema(
 
 const CadastroModel = mongoose.model("Cadastro", CadastroSchema);
 
-module.exports = {
-  CadastroModel
-};
+module.exports = {CadastroModel}
