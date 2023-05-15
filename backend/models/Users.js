@@ -2,18 +2,23 @@ const mongoose = require("mongoose");
 
 const {Schema} = mongoose;
 
-const {serviceSchema} = require("./Cadastro");
+const {cadatroSchema} = require("./Cadastro");
 
-const cadastroSchema = new Schema({
-    title: {
+const userSchema = new Schema({
+    email: {
         type: String,
         required: true,
     },
+    password: {
+        type: String,
+        required: true,
+    },
+
 },
 {timestamps: true}
 );
 
 
-const Users = mongoose.model("Users", cadastroSchema);
+const Users = mongoose.model("Users", userSchema);
 
 module.exports = Users;
