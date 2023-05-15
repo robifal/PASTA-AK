@@ -14,6 +14,12 @@ const App = () => {
     <NavigationContainer >
       <Stack.Navigator 
       initialRouteName="Cadastro" 
+      screenOptions={
+        {
+          headerShown: false
+        }
+      }
+ 
       >
 
        <Stack.Screen name='INICIAL' component={TelaInicial} />

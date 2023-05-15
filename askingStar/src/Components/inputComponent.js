@@ -2,11 +2,11 @@ import { TextInput } from "react-native-paper"
 import { StyleSheet } from "react-native"
 
 
-const Inputcomponent = ({placeholder, func, value}) => {
+const Inputcomponent = ({placeholder, func, value, mode}) => {
 
     const styles = StyleSheet.create({
         stylebutton:{
-            backgroundColor: 'none',
+            backgroundColor: '#E6E6E6',
             borderColor: 'white',
             borderRadius: 5,
             color: 'white',
@@ -25,7 +25,7 @@ const Inputcomponent = ({placeholder, func, value}) => {
             mode='outlined'
             onChange={ func }
             value={value}
-            
+            inputMode={mode}
         />
     )
 }
