@@ -1,7 +1,7 @@
 import Inputcomponent from "../../Components/inputComponent";
 import Buttoncomponent from "../../Components/buttonComponent";
 import { StyleSheet, View, ImageBackground, Text } from "react-native";
-
+import Constants from "expo-constants";
 import { useState } from 'react'
 
 
@@ -36,7 +36,7 @@ const TelaCadastro = ({ navigation }) => {
 
     <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
       
-       <View  style={{ textAlign: 'center',color: '#0D0C67', backgroundColor:"#E6E6E6", height: "3%", width: "100%"  }} >
+       <View  style={{ alignItems: "center",textAlign: 'center',color: '#0D0C67', backgroundColor:"#E6E6E6", height: "3%", width: "100%", justifyContent: "center", fontSize:"00%", marginTop: Constants.statusBarHeight  }} >
             
 
             <Text>CADASTRO</Text>
@@ -77,14 +77,7 @@ const TelaCadastro = ({ navigation }) => {
             } }
             placeholder="Senha" />
           </View>
-          <View>
-            <Text style={{ color: 'white' }}>Confirmação De Senha</Text>
-            <Inputcomponent
-            func={(text) => {
-              setConfirmar(text.target.value)
-            } }
-            placeholder="Confirmar Senha" />
-          </View>
+         
 
 
           <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('ENTRAR')} />
