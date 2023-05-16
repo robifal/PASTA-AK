@@ -21,7 +21,7 @@ server.use('/api', routes)
 
 
 server.listen('3002', function(){
-    console.log('server rodado na porta 3002');
+    console.log('Server rodado na porta 3002!');
 })
 
 

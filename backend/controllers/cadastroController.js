@@ -20,7 +20,7 @@ const CadastroController = {
                 
                 
                 if (cadastroBusca.length !== 0 ) {
-                    console.log('Usuario encontrado!');
+                    console.log('Usuario já encontrado!');
 
                     res.status(401).json({msg: "Usuario Já existente!"})
 

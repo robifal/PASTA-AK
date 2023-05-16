@@ -10,7 +10,7 @@ async function main() {
         await mongoose.connect(
             "mongodb+srv://askingStar:ec6cHtuxm8gcIC8H@cluster0.d9lrn0a.mongodb.net/?retryWrites=true&w=majority"
         );
-        console.log('banco conectado');
+        console.log('Conectado no banco de dados!');
     }   catch(error){
         console.log(`Erro: ${error}`);
     }
