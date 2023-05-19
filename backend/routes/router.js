@@ -19,7 +19,7 @@ module.exports = router
 // Pergunta router
 
 const perguntaRouter = require("./perguntas");
-
+                                
 router.use('/', perguntaRouter);
 
 module.exports = router
