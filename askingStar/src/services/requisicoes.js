@@ -1,0 +1,6 @@
+class Requisicoes {
+
+    registerUsers ()
+
+
+}

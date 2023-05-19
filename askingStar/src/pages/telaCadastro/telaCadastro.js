@@ -26,8 +26,7 @@ const TelaCadastro = ({ navigation }) => {
   console.log(telefone);
   console.log(senha);
   
-
-
+  
 
 
   return (
