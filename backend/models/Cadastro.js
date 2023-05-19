@@ -8,7 +8,7 @@ const CadastroSchema = new Schema(
       type: String,
       required: true
     },
-    dateYear: {
+    telephone: {
       type: Date,
       required: true
     },

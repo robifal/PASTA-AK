@@ -2,8 +2,8 @@ import Inputcomponent from "../../Components/inputComponent";
 import Buttoncomponent from "../../Components/buttonComponent";
 import { StyleSheet, View, ImageBackground, Text } from "react-native";
 import Constants from "expo-constants";
-import { useState } from 'react'
-
+import { useEffect, useState } from 'react'
+import { Requisicoes } from "../../services/requisicoes";
 
 
 const TelaCadastro = ({ navigation }) => {
@@ -25,9 +25,20 @@ const TelaCadastro = ({ navigation }) => {
   console.log(email);
   console.log(telefone);
   console.log(senha);
-  
-  
 
+
+    useEffect (() => {
+         
+
+    }, [])   
+
+
+    const loading = async () => {
+    const requisicoes = new Requisicoes();
+    const response = await requisicoes.registerUsers({data: {nome: nome, email: email, telefone: telefone, senha: senha}});
+    
+        console.log(response);
+  }
 
   return (
 
@@ -87,7 +98,7 @@ const TelaCadastro = ({ navigation }) => {
          
 
 
-          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('ENTRAR')} />
+          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} />
 
         </View>
       </ImageBackground>

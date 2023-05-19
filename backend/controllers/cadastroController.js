@@ -4,19 +4,23 @@ const CadastroController = {
 
     create: async (req, res) => {
         try {
-            const cadastro = {
-                name: req.body.name,
-                dateYear: req.body.dateYear,
-                email: req.body.email,
-                password: req.body.password
+
+            console.log(req.body);
+
+            const cadastro  = {
+                name: req.body.data.nome,
+                telephone: req.body.data.telefone,
+                email: req.body.data.email,
+                password: req.body.data.senha
             };
 
+                console.log(cadastro)
          
                 const cadastroAll = await CadastroModel.find();                
 
                 const cadastroBusca = await CadastroModel.find({email: req.body.email})
 
-                console.log(cadastroBusca);
+                
                 
                 
                 if (cadastroBusca.length !== 0 ) {
@@ -35,7 +39,7 @@ const CadastroController = {
 
 
         } catch (error) {
-            console.log(error);
+            console.log('error');
         }
 
 
@@ -101,7 +105,7 @@ const CadastroController = {
 
         const cadastro = {
             name: req.body.name,
-            dateYear: req.body.dateYear,
+            telephone: req.body.telephone,
             email: req.body.email,
             password: req.body.password
         };
