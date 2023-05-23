@@ -5,7 +5,7 @@ const CadastroController = {
     create: async (req, res) => {
         try {
 
-            console.log(req.body);
+            console.log("body", req.body);
 
             const cadastro  = {
                 name: req.body.data.nome,
@@ -14,8 +14,7 @@ const CadastroController = {
                 password: req.body.data.senha
             };
 
-                console.log(cadastro)
-         
+
                 const cadastroAll = await CadastroModel.find();                
 
                 const cadastroBusca = await CadastroModel.find({email: req.body.email})

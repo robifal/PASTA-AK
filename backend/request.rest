@@ -9,6 +9,18 @@ Content-Type: application/json
     "password": 54244
 }
 
+
+### 
+
+POST http://localhost:3002/api/perguntas
+
+
+{
+    "question" : "THIAGO",
+    "option" : [{"alternative1": "ALEX", "alternative2": "GLAUBER", "alternative3": "MARIO", "alternative4": "ROBERIO"}],
+    "response" : 1
+}
+
 ###
 
 POST http://localhost:3002/api/cadastros

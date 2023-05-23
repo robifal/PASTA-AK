@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 const baseUrl = 'http://localhost:3002';
 
 
@@ -24,6 +23,4 @@ export class Requisicoes {
             console.log(result);
             return result;
         }
-
-
 }
