@@ -98,7 +98,7 @@ const TelaCadastro = ({ navigation }) => {
          
 
 
-          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} />
+          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} title="REGISTRAR"/>
 
         </View>
       </ImageBackground>

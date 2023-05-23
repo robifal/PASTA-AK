@@ -27,6 +27,7 @@ const Inputcomponent = ({placeholder, func, value, mode}) => {
             onChange={ func }
             value={value}
             inputMode={mode}
+            textColor="white"
         />
     )
 }
