@@ -45,7 +45,7 @@ const TelaCadastro = ({ navigation }) => {
 
     
 
-    <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
+    <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/fundobsc.png")} >
       
        <View  style={{ 
         alignItems: "center",
@@ -97,9 +97,9 @@ const TelaCadastro = ({ navigation }) => {
           </View>
          
 
-
+            <View style={{width:"50%"}}>
           <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} title="REGISTRAR"/>
-
+          </View>
         </View>
       </ImageBackground>
         

@@ -26,7 +26,7 @@ const Telalogin = ({ navigation }) => {
 
 
   return (
- <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
+ <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/fundobsc.png")} >
       
       <View  style={{ 
        alignItems: "center",
