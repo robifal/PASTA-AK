@@ -6,7 +6,7 @@ const Inputcomponent = ({placeholder, func, value, mode}) => {
 
     const styles = StyleSheet.create({
         stylebutton:{
-            backgroundColor: '#E6E6E6',
+            backgroundColor: 'none',
             borderColor: 'white',
             borderRadius: 5,
             color: 'white',
@@ -27,6 +27,7 @@ const Inputcomponent = ({placeholder, func, value, mode}) => {
             onChange={ func }
             value={value}
             inputMode={mode}
+            textColor="white"
         />
     )
 }

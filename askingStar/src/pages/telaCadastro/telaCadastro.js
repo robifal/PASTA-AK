@@ -63,7 +63,7 @@ const TelaCadastro = ({ navigation }) => {
         <View style={{flex: 1,gap: 10, justifyContent: 'center',  alignItems: 'center' }}>
          
           <View style={{width: "50%"}}>
-            <Text style={{ justifyContent:"center" ,color: 'white'}}>Seu Email</Text>
+            <Text style={{ justifyContent:"center" ,color: 'white'}}>Email</Text>
             <Inputcomponent 
            func = {(text) => {
             setEmail(text.target.value) 
@@ -71,7 +71,7 @@ const TelaCadastro = ({ navigation }) => {
            placeholder="Email" />
           </View>
           <View style={{width: "50%"}}>
-            <Text style={{ color: 'white'}}>Seu Nome</Text>
+            <Text style={{ color: 'white'}}>Nome</Text>
             <Inputcomponent 
             func= {(text) => {
               setNome(text.target.value)
@@ -79,7 +79,7 @@ const TelaCadastro = ({ navigation }) => {
             placeholder="Nome" />
           </View>
           <View style={{width: "50%"}}>
-            <Text style={{ color: 'white' }}>Seu Numero De Telefone</Text>
+            <Text style={{ color: 'white' }}>Número De Telefone</Text>
             <Inputcomponent
             func={(Number) => {
               setTelefone(Number.target.value)
@@ -98,7 +98,7 @@ const TelaCadastro = ({ navigation }) => {
          
 
 
-          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} />
+          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} title="REGISTRAR"/>
 
         </View>
       </ImageBackground>
