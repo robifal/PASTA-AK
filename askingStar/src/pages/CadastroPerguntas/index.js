@@ -1,4 +1,5 @@
-import { View,Text, ImageBackground, StyleSheet } from "react-native";
+import { useState } from "react";
+import { View,Text, ImageBackground, StyleSheet} from "react-native";
 import Buttoncomponent from "../../Components/buttonComponent";
 import Inputcomponent from "../../Components/inputComponent";
 
@@ -15,10 +16,21 @@ const  Perguntas = ({ navigation}) => {
       }
       )
     
-      const
+      const [quest, setQuest] = useState();
+      const [alter, setAlter] = useState([]);
+      const [respost, setRespost] = useState();
 
+
+      const setAlternativa = (alternativa) => {
+        console.log(alternativa);
+            const teste = [ { alternativa}]
+        setAlter([...alter, alternativa])
+        
+        console.log(alter);
+      }
 
     return(
+
 
         
         <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/fundobsc.png")} >
@@ -42,18 +54,21 @@ const  Perguntas = ({ navigation}) => {
            <Text style={{ justifyContent:"center" ,color: 'white'}}>Pergunta</Text>
            <Inputcomponent 
           func = {(text) => {
+            setQuest(text);
           } }           
           placeholder="Email" />
          </View>
          <View style={{width: "50%"}}>
-           <Text style={{ color: 'white'}}>alternativa 1</Text>
+           <Text style={{ color: 'white'}}>Alternativa 1</Text>
            <Inputcomponent 
            func= {(text) => {
+            console.log(text.target.value);
+            setAlternativa({alter1: text.target.value})
            } }
            placeholder="Nome" />
          </View>
          <View style={{width: "50%"}}>
-           <Text style={{ color: 'white' }}>alternativa 2</Text>
+           <Text style={{ color: 'white' }}>Alternativa 2</Text>
            <Inputcomponent
            func={(Number) => {
            } }
@@ -64,7 +79,8 @@ const  Perguntas = ({ navigation}) => {
            <Text style={{ color: 'white' }}>Resposta</Text>
            <Inputcomponent 
            func={(text) => {
-           } }
+            setRespost(text)
+        } }
            placeholder="Senha" />
          </View>
         
