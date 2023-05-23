@@ -1,91 +1,67 @@
-import React, { useState } from 'react';
-import { ImageBackground, Button, Text, TextInput, StyleSheet, View , Image} from 'react-native';
 import Inputcomponent from "../../Components/inputComponent";
+import Buttoncomponent from "../../Components/buttonComponent";
+import React, { useState, useEffect } from 'react';
+import { ImageBackground, Text, StyleSheet, View } from 'react-native';
+import Constants from "expo-constants";
 
-const Telalogin = () => {
+const Telalogin = ({ navigation }) => {
     
   const styles = StyleSheet.create({
-    containerImg: {
-      width: '100%',
-      position: 'relative',
-      top: '20%',
-      justifyContent: 'center',
-      alignItems: 'center'
-    },
-    
-    img: {
-      width: 200,
-      height: 100,
-      justifyContent: 'center',
-      alignItems: 'center',
-      resizeMode: 'contain',
-      },
-  });
+    stylebutton: {
+      backgroundColor: '#0D0C67',
+      borderRadius: 5
+    }
+  }
+  )
+
+  const [senha, setSenha] = useState('')
+  const [email, setEmail] = useState('')
 
 
-  
+  useEffect (() => {
+         
+
+  }, []) 
+
+
 
   return (
-    <View style={{ color:'white', flex: 1, backgroundColor: '#070730' , padding: ''}}>
-     <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
-    <View style={styles.containerImg}> 
-       <Image source={require('../../../img/branca.svg')}
-           style={
-             styles.img
-           }/>
-    </View>
-
-   
-    <View style={{ 
-          display:  'flex',
-          justifyContent: 'center',
-          alignitems: 'center',
-          flex: 1
-          }}> 
-    
-       <TextInput
-        style={{
-          borderWidth: 0.5,
-          backgroundColor: 'none',
-          borderColor: 'white',
-          borderRadius: 5,
-          color: 'white',
-          padding: 10,
-          flexDirection: 'column',
-          alignitems: 'stretch' ,
-          marginHorizontal: 10,
-          
-        }}
-        placeholder=" Coloque seu Email"
-      />
-      <TextInput
-    
-        style={{ borderWidth: 1.2,
-        backgroundColor: 'none',
-        borderColor: 'white',
-        borderRadius: 5,
-        color: 'white',
-        padding: 10,
-        flexDirection: 'column',
-        alignitems: 'stretch', 
-        marginHorizontal: 10,
-          }}
-        placeholder=" Coloque sua senha"
-      />
-      <View style={{backgroundColor: '#0B0B5B', marginHorizontal: 10, marginVertical: 5, borderRadius: 5}}>
-      <Button color='none' title="Sing in" />
-       </View>
-      <Text style={{ color: 'skyblue', marginHorizontal: 10 }}>Esqueceu a senha?</Text>
-      <Text style={{color: 'skyblue', marginHorizontal: 10}}>Cadastre-se </Text>
-      </View>
-      <View>
+ <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
       
+      <View  style={{ 
+       alignItems: "center",
+       textAlign: 'center',
+       backgroundColor:"#E6E6E6", 
+       height: "3%", 
+       width: "100%", 
+       justifyContent: "center", 
+       marginTop: Constants.statusBarHeight  }} >
+
+<Text style={{fontSize:25,fontWeight:"bold" ,color: '#0D0C67' }}>LOGIN</Text>
+
       </View>
-      </ImageBackground>
-    </View>    
-
-  );    
-
+      <View style={{flex: 1,gap: 10, justifyContent: 'center',  alignItems: 'center' }}>
+      <View style={{width: "50%"}}>
+            <Text style={{ justifyContent:"center" ,color: 'white'}}>Email</Text>
+            <Inputcomponent 
+           func = {(text) => {
+            setEmail(text.target.value) 
+           } }           
+           placeholder="Email" />
+          </View>
+          <View style={{width: "50%"}}>
+            <Text style={{ color: 'white'}}>Senha:</Text>
+            <Inputcomponent 
+            func= {(text) => {
+              setSenha(text.target.value)
+            } }
+            placeholder="Senha" />
+          </View>
+            
+          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} />
+      </View>
+  </ImageBackground>
+  );
 
 };
  export default Telalogin;

@@ -65,9 +65,7 @@ const TelaInicial = ({navigation}) => {
       <Text style={{ color: 'skyblue', marginHorizontal: 10 }}>
           Cadastre-se{' '}
         </Text>
-        <Image 
-        source={ {uri: 'https://raw.githubusercontent.com/End-Star01/ask-images/main/img/background-ask.png?token=GHSAT0AAAAAACCPPHKZYLSYNC4RNVGVWE2AZC34JRA'}}
-        /> 
+        
 
       </View>
       </View>
