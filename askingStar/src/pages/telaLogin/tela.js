@@ -58,7 +58,10 @@ const Telalogin = ({ navigation }) => {
             placeholder="Senha" />
           </View>
             
+
+            <View style={{width: "50%"}}>
           <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} title= "Logar"/>
+          </View>
       </View>
   </ImageBackground>
   );
