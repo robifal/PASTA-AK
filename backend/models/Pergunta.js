@@ -2,14 +2,19 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const perguntaSchema = new Schema({
+const PerguntaSchema = new Schema({
 
     question: {
         type: String,
         required: true
     },
+    alternative: {
+    option: [{alternative1: String, alternative2: String, alternative3: String, alternative4: String}],
+    type: [],
+    required: true  
+    },
     response: {
-        type: String,
+        type: Number,
         required: true
     },
 
@@ -17,10 +22,10 @@ const perguntaSchema = new Schema({
 {timestamps: true}
 );
 
-const Perguntas = mongoose.model("Perguntas", perguntaSchema);
+const Perguntas = mongoose.model("Perguntas", PerguntaSchema);
 
 
-module.exports = Perguntas;
+module.exports = {Perguntas};
 
 
 

@@ -5,8 +5,6 @@ const CadastroController = require("../controllers/cadastroController");
 
 
 router.route('/cadastro').post((req, res) => CadastroController.create(req, res));
-
-
 router.route('/cadastros').get((req, res) => CadastroController.getAll(req, res));
 
 router.route('/cadastros/:id').get((req, res) => CadastroController.get(req, res));
