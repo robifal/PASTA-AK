@@ -12,7 +12,7 @@ const TelaCadastro = ({ navigation }) => {
   const styles = StyleSheet.create({
     stylebutton: {
       //backgroundColor: '#000000',
-      borderRadius: 5
+      // borderRadius: 5
     }
   }
   )
