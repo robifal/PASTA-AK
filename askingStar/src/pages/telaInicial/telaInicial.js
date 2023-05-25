@@ -1,78 +1,42 @@
 import React, { useState } from 'react';
-import { Button, Text,  View , StyleSheet, Image} from 'react-native';
-import ButtonIcomponent from '../../Components/buttonIComponent';
+import { Text,  View , StyleSheet, ImageBackground} from 'react-native';
+import { Button } from 'react-native-paper';
+import Inputcomponent from '../../Components/inputComponent';
+import Buttoncomponent from '../../Components/buttonComponent';
 
 
 const image = {}
 
 const TelaInicial = ({navigation}) => {
 
-  const Separator = () => <View style={styles.separator} />
-
-
-  
   const styles = StyleSheet.create({
-    separator:{
-      margin: 10,
+    stylebutton: {
+      backgroundColor: '#E6E6E6',
+      textColor: '#0D0C67',
+      borderRadius: 5
     }
-  })
+  }
+  )
 
   return (
-    <View
-      style={{
-        color: 'white',
-        flex: 1,
-        backgroundColor: '#070719',
-        padding: 5,
-      }}>
-     
-      <View
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignitems: 'center',
-          flex: 1,
-        }}>
-       
-        <View
-          style={{
-            backgroundColor: '#0B0B3B',
-            marginHorizontal: 10,
-            borderRadius: 5,
-          }}>
 
-          <ButtonIcomponent stylebutton={styles.stylebutton} fpress={() => navigation.navigate('CADASTRO')} />
-    </View>   
-    <Separator/>
-    <View
-          style={{
-            backgroundColor: '#0B0B3B',
-            marginHorizontal: 10,
-            borderRadius: 5,
-          }}>
-          <Button color="" title="Conectar"/>
+    <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
+
+
+        <View style={{flex: 1,gap: 10, justifyContent: 'center' , alignItems: 'center' }}>
+         
+          <View style={{width:"50%"}}>
+          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} title="CONECTAR"/>
+
+          </View>
+
+            <View style={{width:"50%"}}>
+          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} title="CADASTRE-SE" />
+          </View>
+
         </View>
-        <Text style={{ color: 'skyblue', marginHorizontal: 10 }}>
-          Esqueceu a senha?
-        </Text>
-        <Text style={{ color: 'skyblue', marginHorizontal: 10 }}>
-          Cadastre-se{' '}
-        </Text>
-
-
-
-      <View> 
-      <Text style={{ color: 'skyblue', marginHorizontal: 10 }}>
-          Cadastre-se{' '}
-        </Text>
+      </ImageBackground>
         
-
-      </View>
-      </View>
-
-
-    
-    </View>
 
   );
 };
