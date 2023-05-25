@@ -4,13 +4,14 @@ import { StyleSheet, View, ImageBackground, Text } from "react-native";
 import Constants from "expo-constants";
 import { useEffect, useState } from 'react'
 import { Requisicoes } from "../../services/requisicoes";
+import { TEMA_CORES } from "../../styles/color";
 
 
 const TelaCadastro = ({ navigation }) => {
 
   const styles = StyleSheet.create({
     stylebutton: {
-      backgroundColor: '#0D0C67',
+      //backgroundColor: '#000000',
       borderRadius: 5
     }
   }
@@ -68,7 +69,7 @@ const TelaCadastro = ({ navigation }) => {
            func = {(text) => {
             setEmail(text.target.value) 
            } }           
-           placeholder="Email" />
+           placeholder="Email" color="white"/>
           </View>
           <View style={{width: "50%"}}>
             <Text style={{ color: 'white'}}>Nome</Text>
@@ -98,7 +99,9 @@ const TelaCadastro = ({ navigation }) => {
          
 
             <View style={{width:"50%"}}>
-          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} title="REGISTRAR"/>
+          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} 
+            title="REGISTRAR" 
+            />
           </View>
         </View>
       </ImageBackground>

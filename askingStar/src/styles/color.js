@@ -1,4 +1,4 @@
-export const color = {
+export const TEMA_CORES = {
     primaryblue: "#152896",
     secundarypink: "#F4D3F0",
 

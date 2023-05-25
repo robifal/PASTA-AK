@@ -1,21 +1,16 @@
-import { Button, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { Button } from 'react-native-paper';
+import { TEMA_CORES } from '../styles/color';
+const Buttoncomponent = ({ fpress, stylebutton, title, color = TEMA_CORES.primaryblue, buttonColor=TEMA_CORES.secundarypink }) => {
 
-const Buttoncomponent =({fpress, stylebutton, title}) => {
-    return(
+
+    return (
         <View style={stylebutton}>
-        <Button title={title} color='none'   onPress={ fpress} />
+            <Button title={title} textColor={color} onPress={fpress} buttonColor={buttonColor}> {title} </Button>
         </View>
-    
 
-    )}
 
-    const styles = StyleSheet.create({
-stylebutton:{
-    width: '100%',
-
-}
-    }
     )
-
+}
 
 export default Buttoncomponent;

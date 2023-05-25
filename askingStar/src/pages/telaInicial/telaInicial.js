@@ -26,12 +26,16 @@ const TelaInicial = ({navigation}) => {
         <View style={{flex: 1,gap: 10, justifyContent: 'center' , alignItems: 'center' }}>
          
           <View style={{width:"50%"}}>
-          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} title="CONECTAR"/>
+          <Buttoncomponent 
+          color="#0D0C67"
+          stylebutton={styles.stylebutton} fpress={() => loading()} title="CONECTAR"/>
 
           </View>
 
             <View style={{width:"50%"}}>
-          <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} title="CADASTRE-SE" />
+          <Buttoncomponent 
+          color="#0D0C67"
+          stylebutton={styles.stylebutton} fpress={() => loading()} title="CADASTRE-SE" />
           </View>
 
         </View>
