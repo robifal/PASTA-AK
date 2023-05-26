@@ -9,7 +9,7 @@ const Buttoncomponent = ({ fpress, stylebutton, title, color = TEMA_CORES.primar
 
     return (
         <View style={stylebutton}>
-            <Button title={title} textColor={color} onPress={fpress} buttonColor={buttonColor}> {title} </Button>
+            <Button labelStyle={{fontWeight:"bold"}} title={title} textColor={color} onPress={fpress} buttonColor={buttonColor}> {title} </Button>
         </View>
 
 
