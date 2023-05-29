@@ -10,8 +10,8 @@ const  Perguntas = ({ navigation}) => {
 
     const styles = StyleSheet.create({
         stylebutton: {
-          backgroundColor: '#0D0C67',
-          borderRadius: 5
+          // backgroundColor: '#0D0C67',
+          // borderRadius: 5
         }
       }
       )
