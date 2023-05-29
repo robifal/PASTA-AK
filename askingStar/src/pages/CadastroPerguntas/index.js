@@ -29,6 +29,10 @@ const  Perguntas = ({ navigation}) => {
         console.log(alter);
       }
 
+
+
+      
+
     return(
 
 
