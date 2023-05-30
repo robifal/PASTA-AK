@@ -1,4 +1,4 @@
-const {Perguntas : Perguntas} = require('../models/Pergunta');
+const {Matematica : Matematica} = require('../models/Matematica');
 
 const matematicaController = {
 
@@ -13,7 +13,7 @@ const matematicaController = {
                 response: req.body.response
             }
 
-                const response = await Perguntas.create(perguntasMatematica);
+                const response = await Matematica.create(perguntasMatematica);
 
                 res.json({msg: "Pergunta De Matematica Cadastrada"});
 

@@ -1,4 +1,4 @@
-const {Perguntas : Perguntas }= require('../models/Pergunta');
+const {Edufisica : Edufisica }= require('../models/Edufisica');
 
 
 
@@ -18,7 +18,7 @@ const edufisicaController = {
 
   
 
-            const response = await Perguntas.create(perguntaEdufisica);
+            const response = await Edufisica.create(perguntaEdufisica);
 
             res.json({msg: "Perguntas de Educação Fisica cadastrada!"});
 
