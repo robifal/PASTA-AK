@@ -100,7 +100,7 @@ const TelaCadastro = ({ navigation }) => {
 
             <View style={{width:"50%"}}>
           <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} 
-            title="REGISTRAR" 
+            title="CADASTRAR" 
             />
           </View>
         </View>

@@ -15,7 +15,7 @@ const App = () => {
     
     <NavigationContainer >
       <Stack.Navigator 
-      initialRouteName="Game" 
+      initialRouteName="Cadastro" 
       screenOptions={
         {
           headerShown: false
@@ -26,13 +26,13 @@ const App = () => {
 
       <Stack.Screen name='Game' component={Quiz} />
 
-        <Stack.Screen name='Perguntas' component={Perguntas} />
+      <Stack.Screen name='Perguntas' component={Perguntas} />
 
-       <Stack.Screen name='Inicial' component={TelaInicial} />
+      <Stack.Screen name='Inicial' component={TelaInicial} />
         
-        <Stack.Screen name="Cadastro" component={TelaCadastro} />
+      <Stack.Screen name="Cadastro" component={TelaCadastro} />
         
-        <Stack.Screen name="Entrar" component={Telalogin} />
+      <Stack.Screen name="Entrar" component={Telalogin} />
 
 
       </Stack.Navigator>
