@@ -38,6 +38,8 @@ const TelaCadastro = ({ navigation }) => {
     const requisicoes = new Requisicoes();
     const response = await requisicoes.registerUsers({data: {nome: nome, email: email, telefone: telefone, senha: senha}});
     
+            
+
         console.log(response);
   }
 

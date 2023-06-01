@@ -26,8 +26,34 @@ const edufisicaController = {
         }catch(error){
             console.log(error);
         }
+   },
 
+
+   delete: async(req, res) => {
+    try{
+
+        const  id = req.params.id;
+
+        const cadastroF = await Edufisica.findById(id);
+        console.log(cadastroF);
+
+
+        if (!cadastroF) {
+            res.status(404).json({msg: 'Cadastro não encontrado.'})
+            return; 
+
+        }
+
+        const deleteCadastro = await Edufisica.findByIdAndDelete(id);
+
+        res.status(200).json(deleteCadastro);
+
+
+    }catch(error){
+        console.log(error);
     }
+}
+
 };  
 
 

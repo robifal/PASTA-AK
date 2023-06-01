@@ -13,6 +13,8 @@ router.route('/matematica').post((req, res) => matematicaController.perguntas(re
 router.route('/portugues').post((req, res) => portguesController.perguntas(req,res));
 router.route('/historia').post((req, res) => historiaController.perguntas(req, res));
 router.route('/edufisica').post((req, res) => edufisicaController.perguntas (req, res));
+router.route('/edufisica/:id').delete((req, res) => edufisicaController.delete(req, res));
+
 router.route('/artes').post((req, res) => artesController.perguntas(req, res));
 router.route('/informatica').post((req, res) => informaticaController.perguntas(req, res));
 

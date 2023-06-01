@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const EdufisicaSchema = new Schema({
-
+    id: {
+        type: Number,
+         
+    },
     question: {
         type: String,
         required: true
