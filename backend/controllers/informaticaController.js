@@ -1,4 +1,4 @@
-const {Perguntas : Perguntas }= require('../models/Pergunta');
+const {Informatica : Informatica }= require('../models/Informatica');
 
 
 
@@ -18,7 +18,7 @@ const informaticaController = {
 
   
 
-            const response = await Perguntas.create(perguntaInformatica);
+            const response = await Informatica.create(perguntaInformatica);
 
             res.json({msg: "Perguntas de Informatica cadastrada!"});
 

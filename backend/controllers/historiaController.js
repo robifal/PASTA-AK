@@ -1,4 +1,4 @@
-const { Perguntas : Perguntas} = require('../models/Pergunta');
+const { Historia : Historia} = require('../models/Historia');
 
 
 const historiaController = {
@@ -12,7 +12,7 @@ const historiaController = {
                 response: req.body.response
             }
 
-            const response = await Perguntas.create(perguntaHistoria)/
+            const response = await Historia.create(perguntaHistoria)/
 
             res.json({msg: "Pergunta De Historia Cadastrada!"});
 

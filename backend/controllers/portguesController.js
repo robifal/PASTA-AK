@@ -1,5 +1,5 @@
 const { model } = require('mongoose');
-const {Perguntas : Perguntas} = require('../models/Pergunta');
+const {Portugues : Portugues} = require('../models/Portugues');
 
 const portuguesController = {
     
@@ -14,7 +14,7 @@ const portuguesController = {
             }
 
 
-            const reponse = await Perguntas.create(perguntasPortugues);
+            const reponse = await Portugues.create(perguntasPortugues);
             res.json({msg: "Pergunta De Portugues Cadastrada!"});
 
 
