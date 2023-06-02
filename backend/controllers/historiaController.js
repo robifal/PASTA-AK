@@ -38,7 +38,35 @@ const historiaController = {
         }catch(error){
             console.log(error);
         }
-    }
+    },
+
+        get: async(req, res) => {
+            try{
+                
+                const Selector = await Historia.find()
+
+
+                console.log(Selector);
+
+                const randomPerguntas = await Historia.aggregate([  
+                    // { $project: { a: 2, b: 2 } },
+                    { $sample: {size: 5}}, 
+                    { $skip: 0 }],
+                    );
+
+                            // console.log(randomPerguntas);
+
+                        Historia.
+                        aggregate([{ $match: { age: { $gte: 21 }}}]).
+                        unwind('tags').
+                        exec();
+
+            }catch(erro){
+                console.log(erro);
+            }
+        }
+
+    
 
 };
 

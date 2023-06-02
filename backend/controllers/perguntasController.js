@@ -26,8 +26,12 @@ const PerguntaController = {
         }catch(error){
             console.log(error);
         }
+    },
 
-    }
+
+    
+
+
 };  
 
 
