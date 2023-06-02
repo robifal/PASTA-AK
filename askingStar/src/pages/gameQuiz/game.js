@@ -19,7 +19,8 @@ const Quiz = ({ navigation }) => {
     return(
         <View style={{
             backgroundColor:'#04154F',
-           flex: 1
+           flex: 1, 
+           
            }}>
         
         <View style={{
@@ -40,9 +41,16 @@ const Quiz = ({ navigation }) => {
 
         </View> 
 
+            <View style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}>
 
+            
         <View style={{
-        padding: 30
+        padding: 30,
+        
         }}>
 
             <Text style={{
@@ -67,8 +75,9 @@ const Quiz = ({ navigation }) => {
 
             
         </View>
-
+       
     </View>
+    </View> 
     </View>
     
     )

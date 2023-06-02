@@ -1,7 +1,7 @@
 import Inputcomponent from "../../Components/inputComponent";
 import Buttoncomponent from "../../Components/buttonComponent";
-import { StyleSheet, View, ImageBackground} from "react-native";
-import { RadioButton, Text} from 'react-native-paper';
+import AlternativasComponent from "../../Components/alternativaComponent";
+import { StyleSheet, View, ImageBackground, Text} from "react-native";
 import Constants from "expo-constants";
 import { useEffect, useState } from 'react'
 import { Requisicoes } from "../../services/requisicoes";
@@ -9,6 +9,12 @@ import { TEMA_CORES } from "../../styles/color";
 
 
 const TelaCadastro = ({ navigation }) => {
+
+  const button_list = [
+    { label: "Aluno", value: "aluno" },
+    { label: "Professor", value: "professor" },
+  ];
+
 
   const styles = StyleSheet.create({
     stylebutton: {
@@ -80,23 +86,6 @@ const TelaCadastro = ({ navigation }) => {
 
           </View>
 
-            <View>
-
-            <RadioButton.Group onValueChange={newValue => setValue(newValue)} value={value}>
-
-            <View>
-             <Text style={{color: TEMA_CORES.classic.white}}>Aluno</Text>
-             <RadioButton value="aluno" />
-            </View>
-      
-               <View>
-              <Text style={{color: TEMA_CORES.classic.white}}>Professor</Text>
-                  <RadioButton value="professor" />
-        
-             </View>
-           </RadioButton.Group>
-
-            </View>
 
           <View style={{width: "50%"}}>
 
@@ -133,8 +122,24 @@ const TelaCadastro = ({ navigation }) => {
             placeholder="Senha" />
 
           </View>
-         
 
+            <View style={{
+              flexDirection: 'row',
+              gap: 20,
+              padding: 10
+            }}>
+
+          <View>
+
+            <AlternativasComponent 
+              
+            horizontal={true}
+                Array={button_list}
+            />
+
+          </View>
+         
+            </View>
             <View style={{width:"50%"}}>
           <Buttoncomponent stylebutton={styles.stylebutton} fpress={() => loading()} 
             title="CADASTRAR" 
