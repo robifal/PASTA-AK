@@ -1,6 +1,7 @@
 import Inputcomponent from "../../Components/inputComponent";
 import Buttoncomponent from "../../Components/buttonComponent";
-import { StyleSheet, View, ImageBackground, Text } from "react-native";
+import { StyleSheet, View, ImageBackground} from "react-native";
+import { RadioButton, Text} from 'react-native-paper';
 import Constants from "expo-constants";
 import { useEffect, useState } from 'react'
 import { Requisicoes } from "../../services/requisicoes";
@@ -16,7 +17,7 @@ const TelaCadastro = ({ navigation }) => {
     }
   }
   )
-
+  const [value, setValue] = useState('first');
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [telefone, setTelefone] = useState('')
@@ -65,38 +66,72 @@ const TelaCadastro = ({ navigation }) => {
           </View>
         <View style={{flex: 1,gap: 10, justifyContent: 'center',  alignItems: 'center' }}>
          
+          
+
           <View style={{width: "50%"}}>
-            <Text style={{ justifyContent:"center" ,color: 'white'}}>Email</Text>
-            <Inputcomponent 
-           func = {(text) => {
-            setEmail(text.target.value) 
-           } }           
-           placeholder="Email" color="white"/>
-          </View>
-          <View style={{width: "50%"}}>
+
             <Text style={{ color: 'white'}}>Nome</Text>
+
             <Inputcomponent 
             func= {(text) => {
               setNome(text.target.value)
             } }
             placeholder="Nome" />
+
           </View>
+
+            <View>
+
+            <RadioButton.Group onValueChange={newValue => setValue(newValue)} value={value}>
+
+            <View>
+             <Text style={{color: TEMA_CORES.classic.white}}>Aluno</Text>
+             <RadioButton value="aluno" />
+            </View>
+      
+               <View>
+              <Text style={{color: TEMA_CORES.classic.white}}>Professor</Text>
+                  <RadioButton value="professor" />
+        
+             </View>
+           </RadioButton.Group>
+
+            </View>
+
           <View style={{width: "50%"}}>
+
             <Text style={{ color: 'white' }}>Número De Telefone</Text>
+
             <Inputcomponent
             func={(Number) => {
               setTelefone(Number.target.value)
             } }
             mode = "tel"
             placeholder="Numero Telefone" />
+
           </View>
+
           <View style={{width: "50%"}}>
+
+            <Text style={{ justifyContent:"center" ,color: 'white'}}>Email</Text>
+                  <Inputcomponent 
+                    func = {(text) => {
+                    setEmail(text.target.value) 
+                    } }           
+                    placeholder="Email" color="white"/>
+
+          </View>
+
+          <View style={{width: "50%"}}>
+
             <Text style={{ color: 'white' }}>Coloque Sua Senha</Text>
+
             <Inputcomponent 
             func={(text) => {
               setSenha(text.target.value)
             } }
             placeholder="Senha" />
+
           </View>
          
 

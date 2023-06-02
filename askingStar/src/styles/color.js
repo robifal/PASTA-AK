@@ -11,5 +11,10 @@ export const TEMA_CORES = {
     degrade:{
         primaryblue:"#3533CD",
         secundaryblack: "#000000"
+    },
+    classic:{
+        white: "#D9D9D9",
+        black: "#000000"
     }
+
 };
