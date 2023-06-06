@@ -28,7 +28,7 @@ const TelaInicial = ({navigation}) => {
           <View style={{width:"50%"}}>
           <Buttoncomponent 
           color="#0D0C67"
-          stylebutton={styles.stylebutton} fpress={() => loading()} title="CONECTAR"/>
+          stylebutton={styles.stylebutton} fpress={() => loading("Entrar")} title="CONECTAR"/>
 
           </View>
 
