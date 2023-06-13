@@ -7,7 +7,7 @@ const userController = {
         try{
             const user = {
                 email: req.body.email,
-                password: req.body.password
+                password: req.body.senha
             }
 
                     const usersAll = await CadastroModel.find();

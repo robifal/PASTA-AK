@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { View,Text, ImageBackground, StyleSheet} from "react-native";
+import { Requisicoes } from "../../services/requisicoes";
 import Buttoncomponent from "../../Components/buttonComponent";
 import Inputcomponent from "../../Components/inputComponent";
 
@@ -16,22 +17,29 @@ const  Perguntas = ({ navigation}) => {
       }
       )
     
-      const [quest, setQuest] = useState();
-      const [alter, setAlter] = useState([]);
-      const [respost, setRespost] = useState();
+      const [question, setQuest] = useState();
+      const [alternative, setAlter] = useState([]);
+      const [response, setRespost] = useState();
 
 
       const setAlternativa = (alternativa) => {
         console.log(alternativa);
             const teste = [ { alternativa}]
-        setAlter([...alter, alternativa])
+        setAlter([...alternative, alternativa])
         
-        console.log(alter);
+        console.log(alternative);
       }
 
+      userEffect (() => {
+
+      }, []) 
 
 
-      
+        const requisicoes = new Requisicoes();
+        const responseQuestion =  requisicoes.cadastroQuestion({data: {question: question, alternative: alternative, response: response}})
+
+        console.log(responseQuestion);
+
 
     return(
 
