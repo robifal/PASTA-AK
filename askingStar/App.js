@@ -1,8 +1,6 @@
 import TelaInicial from './src/pages/telaInicial/telaInicial';
 import Telalogin from './src/pages/telaLogin/tela';
 import TelaCadastro from './src/pages/telaCadastro/telaCadastro';
-import TelaMateria from './src/pages/telaMateria/telaMateria';
-import TelaDificuldade from './src/pages/telaDificuldade/telaDificuldade';
 import Perguntas from './src/pages/CadastroPerguntas/index';
 import Quiz from './src/pages/telaQuiz/game';
 import { NavigationContainer } from '@react-navigation/native';
@@ -17,7 +15,7 @@ const App = () => {
     
     <NavigationContainer >
       <Stack.Navigator 
-      initialRouteName="Materias" 
+      initialRouteName="Inicial" 
       screenOptions={
         {
           headerShown: false
@@ -30,10 +28,6 @@ const App = () => {
        <Stack.Screen name="Cadastro" component={TelaCadastro} />
         
       <Stack.Screen name="Entrar" component={Telalogin} />
-
-      <Stack.Screen name="Materias" component={TelaMateria} />
-
-      <Stack.Screen name="Dificuldade" component={TelaDificuldade} />
 
       <Stack.Screen name='Game' component={Quiz} />
 
