@@ -1,6 +1,7 @@
 import Inputcomponent from "../../Components/inputComponent";
 import Buttoncomponent from "../../Components/buttonComponent";
 import React, { useState, useEffect } from 'react';
+import { Requisicoes} from "../../services/requisicoes";
 import { ImageBackground, Text, StyleSheet, View } from 'react-native';
 import Constants from "expo-constants";
 
@@ -14,16 +15,25 @@ const Telalogin = ({ navigation }) => {
   }
   )
 
-  const [senha, setSenha] = useState('')
   const [email, setEmail] = useState('')
+  const [senha, setSenha] = useState('')
 
+  console.log(email);
+  console.log(senha);
 
   useEffect (() => {
          
 
   }, []) 
 
+  const loading = async () => {
+    const requisicoes = new Requisicoes();
+    const responseLogin = await requisicoes.loginUser({data: {email: email, senha: senha}});
 
+
+      console.log(responseLogin);
+
+  }
 
   return (
  <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/fundobsc.png")} >

@@ -23,3 +23,12 @@ const perguntaRouter = require("./perguntas");
 router.use('/', perguntaRouter);
 
 module.exports = router
+
+
+// CadastroProfessor router
+
+const cadastroProfessorRouter = require("./cadastroProfessor");
+
+router.use('/', cadastroProfessorRouter);
+
+module.exports = router

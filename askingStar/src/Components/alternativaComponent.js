@@ -16,7 +16,7 @@ const AlternativasComponent = ({ Array,
 
     const [choice, setChoice] = useState('');
 
-    
+    console.log(choice);
 
     const Separator = () => {
 

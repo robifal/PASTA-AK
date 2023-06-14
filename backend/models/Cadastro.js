@@ -9,7 +9,7 @@ const CadastroSchema = new Schema(
       required: true
     },
     telephone: {
-      type: Date,
+      type: Number,
       required: true
     },
     email: {
