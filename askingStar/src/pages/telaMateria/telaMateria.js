@@ -22,12 +22,12 @@ const TelaMateria = ({navigation}) =>{
             
 
 
-            const HomeScreen = (
+            {/* const HomeScreen = (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
              <Text>Home!</Text>
              </View>
 
-            ) 
+            )  */}
 
             <Tab.Navigator>
                 <Tab.Screen name="Materias" component={HomeScreen} />
