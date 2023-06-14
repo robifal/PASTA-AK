@@ -8,10 +8,25 @@ const CadastroProfeSchema = new Schema(
             type: String,
             required: true
         },
+        telephone:{
+            type: Number,
+            required: true
+        },
         email: {
             type: String,
             required: true
         },
-        
-    }
-)
+        password: {
+            type: String,
+            required: true
+        },
+    },
+        {
+            timestamps: true
+        }
+);
+
+
+const cadastroProfeModel = mongoose.model("CadastroProfessor", CadastroProfeSchema);
+
+module.exports = {cadastroProfeModel}
