@@ -15,7 +15,7 @@ const App = () => {
     
     <NavigationContainer >
       <Stack.Navigator 
-      initialRouteName="Inicial" 
+      initialRouteName="Game" 
       screenOptions={
         {
           headerShown: false

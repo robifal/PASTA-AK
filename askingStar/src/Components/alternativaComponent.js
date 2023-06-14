@@ -28,30 +28,35 @@ const AlternativasComponent = ({ Array,
     }
 
     return(
+        <View style={{ flex:1}}> 
+
         <FlatList 
         ItemSeparatorComponent={Separator}
         style={{ gap: 10}}
         horizontal={horizontal}
         data={Array}
         renderItem={
-            ({ item }) =>
+            ({ item }) =><View style={{}}>
+
             <SimpleSelectButton
             onPress={() => setChoice(item.value)}
             isChecked={choice === item.value}
             text={item.label}
             textSize={14}
             // iconName="checkcircleo"
-            iconColor={iconColor}
-            iconSize={14}
+            // iconColor={iconColor}
+            // iconSize={14}
             buttonDefaultColor={buttonDefaultColor}
             buttonSelectedColor={buttonSelectedColor}
             textDefaultColor={textDefaultColor}
             textSelectedColor={textSelectedColor}
             
             
-          />
+            />
+            </View>
         }
         />
+        </View>
     )
 
 }

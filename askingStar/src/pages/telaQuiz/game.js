@@ -14,72 +14,79 @@ const Quiz = ({ navigation }) => {
         { label: "240 caixas", value: "b" },
         { label: "150 caixas", value: "c" },
         { label: "250 caixas", value: "d" },
-      ];
+    ];
 
-    return(
+    return (
         <View style={{
-            backgroundColor:'#04154F',
-           flex: 1, 
-           
-           }}>
-        
-        <View style={{
-            alignItems: 'stretch',
-            textAling: "center",
-            backgroundColor: "#102261",
-            height: "5%",
-            justifyContent: "center",
-            marginTop: Constants.statusBarHeight,
-            padding: 20,
-            width: "100%"
+            backgroundColor: '#04154F',
+            flex: 1,
+
         }}>
-    
-        <Text style={{
-            fontSize:25,
-            color: "white",
-            }}>Matématica </Text>
 
-        </View> 
+            <View style={{
+                alignItems: 'stretch',
+                textAling: "center",
+                backgroundColor: "#102261",
+                height: "8%",
+                justifyContent: "center",
+                marginTop: Constants.statusBarHeight,
+                padding: 20,
+                width: "100%"
+            }}>
+
+                <Text style={{
+                    fontSize: 25,
+                    color: "white",
+                }}>Matématica </Text>
+
+            </View>
 
             <View style={{
                 flex: 1,
                 justifyContent: 'center',
                 alignItems: 'center',
+
             }}>
 
-            
-        <View style={{
-        padding: 30,
-        
-        }}>
 
-            <Text style={{
-                color: "#D9D9D9",
-            }}>
-        1. Ana tem 3000 empadas para entregar. Ela tem que armazena-las em caixas que comportam apenas 12. Quantas caixas ela precisará para entregar as empadas?
-            </Text>
+                <View style={{
+                    height: '70%',
+                    padding: 30,
+                    
+                }}>
 
-        <View>
+                    <Text style={{
+                        color: "#D9D9D9",
+                        fontSize:20
+                    }}>
+                        1. Ana tem 3000 empadas para entregar. Ela tem que armazena-las em caixas que comportam apenas 12. Quantas caixas ela precisará para entregar as empadas?
+                    </Text>
 
-        <AlternativasComponent 
-        Array={button_list}
-        />
+                    <View style={{
+                        height:250,
 
+                    }}>
+                        <View style={{  }}>
+
+                            <View style={{ height: "100%"}}>
+                                <AlternativasComponent
+                                    Array={button_list}
+                                />
+                            </View>
+                        </View>
+
+
+
+                    </View>
+                            <View style={{marginTop: 20}}>
+                            <Buttoncomponent buttonColor={TEMA_CORES.complement.tertiaryazulc} color="#D9D9D9" fpress={() => loading()} title="Submit" />
+                            </View>
+
+
+                </View>
+            </View>
         </View>
 
-        <View style={{
-            marginTop: 20,
-            fontWeight: "bold"
-        }}>
-            <Buttoncomponent  buttonColor={TEMA_CORES.complement.tertiaryazulc} color="#D9D9D9" fpress={() => loading()} title="Submit"/>
-
-            
-        </View>
-       
-    </View>
-    </View> 
-    </View>
-    
     )
 
 }
