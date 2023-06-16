@@ -12,7 +12,7 @@ export class Requisicoes {
  
         }
 
-   async registerUsers({data}) {
+   async registerUsers(data) {
             console.log(data);
           const result =  await axios.post(`${baseUrl}/api/cadastro`, {
 

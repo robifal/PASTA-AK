@@ -29,19 +29,25 @@ const TelaCadastro = ({ navigation }) => {
   const [email, setEmail] = useState('')
   const [telefone, setTelefone] = useState('')
   const [senha, setSenha] = useState('')
+  const [professor, setProfessor] = useState('aluno')
+  const [curriculo, setCurriculo] = useState('')
+
 
   console.log(nome)
   console.log(email);
   console.log(telefone);
   console.log(senha);
 
-  const [visibilitycurriculo, setvisibilitycurriculo] = useState(true)
+  const [visibilitycurriculo, setvisibilitycurriculo] = useState(false)
 
   const dadosUser = { 
     nome: nome,
     email: email,
     telefone: telefone, 
-    senha: senha }
+    senha: senha,
+    curriculo: curriculo,
+    professor: professor === "professor"? true: false
+  }
 
     console.log(dadosUser);
 
@@ -51,15 +57,17 @@ const TelaCadastro = ({ navigation }) => {
   }, [])
 
 
-  const loading = async () => {
-    // const requisicoes = new Requisicoes();
-    // const response = await requisicoes.registerUsers(dadosUser);
+  const registrarUsers = async () => {
 
-    console.log("aaaaaaaaaaaa");
+   
+
+    const requisicoes = new Requisicoes();
+    const response = await requisicoes.registerUsers(dadosUser);
+
     navigation.navigate("Entrar")
 
 
-    // console.log(response);
+    console.log(response);
   }
 
   function exibirButton(value){
@@ -89,7 +97,8 @@ const TelaCadastro = ({ navigation }) => {
 
       </Text>
 
-      <Inputcomponent 
+      <Inputcomponent  
+        func = {(text) => setCurriculo(text)}
         placeholder={"Link Curriculo"}
       />
 
@@ -189,11 +198,16 @@ const TelaCadastro = ({ navigation }) => {
 
           <View>
 
+
+
              <FlatList 
              data={button_list}
              renderItem={({item}) => <SimpleSelectButton 
              text= {item.label}
+             buttonSelectedColor={"red"}
+             isChecked={professor === item.value}
              onPress={() => {
+                setProfessor(item.value)
                 exibirButton(item.value)
             
              }}/>}
@@ -203,7 +217,7 @@ const TelaCadastro = ({ navigation }) => {
 
         </View>
         <View style={{ width: "50%" }}>
-          <Buttoncomponent  fpress={() => loading()}
+          <Buttoncomponent  fpress={() => registrarUsers()}
             title="CADASTRAR"
           />
         </View>

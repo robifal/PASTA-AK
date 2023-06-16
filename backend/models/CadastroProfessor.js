@@ -9,7 +9,7 @@ const CadastroProfeSchema = new Schema(
             required: true
         },
         telephone:{
-            type: Number,
+            type: String,
             required: true
         },
         email: {
@@ -20,6 +20,10 @@ const CadastroProfeSchema = new Schema(
             type: String,
             required: true
         },
+        curriculo: {
+            type: String,
+            required: true
+        }
     },
         {
             timestamps: true
@@ -27,6 +31,6 @@ const CadastroProfeSchema = new Schema(
 );
 
 
-const cadastroProfeModel = mongoose.model("CadastroProfessor", CadastroProfeSchema);
+const CadastroProfeModel = mongoose.model("CadastroProfessor", CadastroProfeSchema);
 
-module.exports = {cadastroProfeModel}
+module.exports = {CadastroProfeModel}

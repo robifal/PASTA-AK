@@ -1,18 +1,31 @@
 const {CadastroModel : CadastroModel} = require("../models/Cadastro");
+const { CadastroProfeModel } = require("../models/CadastroProfessor");
 
 const CadastroController = {
 
     create: async (req, res) => {
         try {
 
-            console.log("body", req.body);
-
-            const cadastro  = {
-                name: req.body.data.nome,
+            const cadastroAluno = {
+                    
+                nome: req.body.data.nome,
                 telephone: req.body.data.telefone,
                 email: req.body.data.email,
                 password: req.body.data.senha
-            };
+            }
+
+            const cadastroProfessor = {
+                    
+                nome: req.body.data.nome,
+                telephone: req.body.data.telefone,
+                email: req.body.data.email,
+                password: req.body.data.senha,
+                curriculo: req.body.data.curriculo
+            } 
+
+
+            console.log(cadastroAluno, cadastroProfessor);
+
 
 
                 const cadastroAll = await CadastroModel.find();                
@@ -29,9 +42,16 @@ const CadastroController = {
 
                 }else{
                     console.log('Usuario não encontrado!');
+                     
+                        if (req.body.data.professor ) {
+                            const response = await CadastroProfeModel.create(cadastroProfessor);
+                            console.log(response);
+                        }else{
+                            const response = await CadastroModel.create(cadastroAluno)
+                        }
 
-                    const response = await CadastroModel.create(cadastro);
-
+                  
+                                console.log("baateu aki ");
 
                     res.status(200).json({msg: "Usuario Cadastrado!"})
                 }
