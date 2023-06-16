@@ -28,7 +28,7 @@ export class Requisicoes {
         async loginUser({data}) {
           console.log(data);
 
-          const resultLogin =  await axios.post(`${baseUrl}/api/perguntas`, {
+          const resultLogin =  await axios.get(`${baseUrl}/api/perguntas`, {
                 
               data: data
           }).then(res => res);
@@ -46,7 +46,61 @@ export class Requisicoes {
             return resultPerguntas;
       }
         
-}
+      async portuguesQuestion({}) {
+
+        const resultPortgues = await axios.get(`${baseUrl}/api/portugues`, {
+
+        }).then(res => res);
+          console.log(resultPortgues);
+          return resultPortgues;
+      
+      }
+
+      async matematicaQuestion({}) {
+
+        const resultMatematica = await axios.get(`${baseUrl}/api/matematica`, {
+
+        }).then(res => res);
+          console.log(resultMatematica);
+          return resultMatematica;
+      }
+
+    async historiaQuestion({}) {
+
+      const resultHistoria = await axios.get(`${baseUrl}/api/historia`, {
+
+      }).then(res => res);
+        console.log(resultHistoria);
+        return resultHistoria;
+    }
+
+    async edufisicaQuestion({}) {
+
+      const resultEdufisica = await axios.get(`${baseUrl}/api/edufisica`, {
+
+      }).then(res => res);
+        console.log(resultEdufisica);
+        return resultEdufisica;
+    }
+
+    async artesQuestion({}) {
+
+      const resultArtes = await axios.get(`${baseUrl}/api/artes`, {
+
+      }).then(res => res);
+        console.log(resultArtes);
+        return resultArtes;
+    }
+    
+    async informaticaQuestion({}) {
+
+      const resultInformatica = await axios.get(`${baseUrl}/api/informatica`, {
+
+      }).then(res => res);
+          console.log(resultInformatica);
+          return resultInformatica;
+    }
+} 
 
 
 
