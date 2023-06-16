@@ -6,7 +6,10 @@ import { TEMA_CORES } from "../../styles/color";
 
 
 
-const Quiz = ({ navigation }) => {
+const Quiz = ({ navigation,route }) => {
+
+    const {id}=route.params
+    console.log(id);
 
 
     const button_list = [
