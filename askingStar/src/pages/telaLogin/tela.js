@@ -27,12 +27,12 @@ const Telalogin = ({ navigation }) => {
   }, []) 
 
   const loading = async () => {
-    const requisicoes = new Requisicoes();
-    const responseLogin = await requisicoes.loginUser({data: {email: email, senha: senha}});
+    // const requisicoes = new Requisicoes();
+    // const responseLogin = await requisicoes.loginUser({data: {email: email, senha: senha}});
 
 
-      console.log(responseLogin);
-
+      // console.log(responseLogin);
+      navigation.navigate("Materia")
   }
 
   return (

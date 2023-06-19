@@ -179,6 +179,7 @@ const TelaCadastro = ({ navigation }) => {
           <Text style={{ color: 'white' }}>Coloque Sua Senha</Text>
 
           <Inputcomponent
+          type="password"
             func={(text) => {
               setSenha(text.target.value)
             }}
@@ -204,7 +205,8 @@ const TelaCadastro = ({ navigation }) => {
              data={button_list}
              renderItem={({item}) => <SimpleSelectButton 
              text= {item.label}
-             buttonSelectedColor={"red"}
+             buttonSelectedColor={TEMA_CORES.complement.primarylilas}
+             buttonDefaultColor={TEMA_CORES.secundarypink}
              isChecked={professor === item.value}
              onPress={() => {
                 setProfessor(item.value)

@@ -16,7 +16,7 @@ const App = () => {
     
     <NavigationContainer >
       <Stack.Navigator 
-      initialRouteName="Cadastro" 
+      initialRouteName="Materia" 
       screenOptions={
         {
           headerShown: false
