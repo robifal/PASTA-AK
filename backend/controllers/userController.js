@@ -1,45 +1,29 @@
-const userModel = require('../models/Users');
-const {CadastroModel : CadastroModel} = require("../models/Cadastro");
-
+const userModel = require("../models/Users");
+const { CadastroModel: CadastroModel } = require("../models/Cadastro");
 
 const userController = {
-    login: async(req, res) => {
-        try{
-            const user = {
-                email: req.body.email,
-                password: req.body.senha
-            }
+  login: async (req, res) => {
+    try {
+      const { email, password } = req.headers;
+      console.log(email, password);
 
-                    const usersAll = await CadastroModel.find();
-               
-                    
+      const usersDB = await CadastroModel.find({ email: email });
+      console.log(usersDB);
 
-
-
-            usersAll.forEach(function({email, password}){
-
-                if (user.email === email && user.password === password) {
-                        
-                    const acesso = true;
-                    
-                    res.status(200).json(acesso);
-
-                }else {
-
-                    const acesso = false;
-                    
-                    res.status(200).json(acesso);
-
-                }
-            })
-
-                 
-
-        }catch(error){
-            console.log(error);
-        }
+      if (usersDB.length > 0) {
+        usersDB.forEach(function ({ email: emailDB, password: passwordDB }) {
+          if (email === emailDB && password === passwordDB) {
+            const acesso = true;
+            res.status(200).json({ status: acesso });
+          }
+        });
+      } else {
+        res.status(404).send("Oh vey Não encontrou!");
+      }
+    } catch (error) {
+      console.log("login");
     }
+  },
+};
 
-}; 
-
-module.exports = userController; 
+module.exports = userController;
