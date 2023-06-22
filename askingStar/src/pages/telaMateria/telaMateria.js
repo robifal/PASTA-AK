@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, Pressable } from "react-native"
+import { View, FlatList, Image, Pressable } from "react-native"
 import Constants from "expo-constants";
 
 
