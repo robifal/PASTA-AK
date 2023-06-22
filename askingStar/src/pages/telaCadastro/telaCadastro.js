@@ -36,21 +36,15 @@ const TelaCadastro = ({ navigation }) => {
   const [visibilitycurriculo, setvisibilitycurriculo] = useState(false);
   const [curriculo, setCurriculo] = useState("curriculo");
 
-  console.log(nome);
-  console.log(email);
-  console.log(telefone);
-  console.log(senha);
-
   const dadosUser = {
-    nome: nome,
+    name: nome,
     email: email,
-    telefone: telefone,
-    senha: senha,
+    telephone: telefone,
+    password: senha,
     curriculo: curriculo,
     professor: professor === "professor" ? true : false,
   };
 
-  console.log(dadosUser);
 
   useEffect(() => {}, []);
 
@@ -60,7 +54,7 @@ const TelaCadastro = ({ navigation }) => {
 
     navigation.navigate("Entrar");
 
-    console.log(response);
+    
   };
 
   function exibirButton(value) {
@@ -101,48 +95,50 @@ const TelaCadastro = ({ navigation }) => {
           alignItems: "center",
         }}
       >
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Text style={{ color: "white" }}>Nome</Text>
 
           <Inputcomponent
             func={(text) => {
-              setNome(text.target.value);
+              setNome(text);
             }}
             placeholder="Nome"
           />
         </View>
 
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Text style={{ color: "white" }}>Número De Telefone</Text>
 
           <Inputcomponent
             func={(Number) => {
-              setTelefone(Number.target.value);
+              setTelefone(Number);
             }}
             mode="tel"
             placeholder="Numero Telefone"
           />
         </View>
 
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Text style={{ justifyContent: "center", color: "white" }}>
             Email
           </Text>
           <Inputcomponent
-            onBlur={(text) => {
-              setEmail(text.target.value);
+            mode="email"
+            func={(text) => {
+              setEmail(text);
             }}
             placeholder="Email"
             color="white"
           />
         </View>
 
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Text style={{ color: "white" }}>Coloque Sua Senha</Text>
 
           <Inputcomponent
+          secureTextEntry={true}
             func={(text) => {
-              setSenha(text.target.value);
+              setSenha(text);
             }}
             placeholder="Senha"
           />
@@ -166,7 +162,10 @@ const TelaCadastro = ({ navigation }) => {
               renderItem={({ item }) => (
                 <SimpleSelectButton
                   text={item.label}
-                  buttonSelectedColor={"red"}
+                  buttonSelectedColor={TEMA_CORES.complement.primarylilas}
+                  buttonDefaultColor={TEMA_CORES.secundarypink}
+                  textDefaultColor={TEMA_CORES.primaryblue}
+                  textSelectedColor={TEMA_CORES.secundarypink}
                   isChecked={professor === item.value}
                   onPress={() => {
                     setProfessor(item.value);
@@ -177,7 +176,7 @@ const TelaCadastro = ({ navigation }) => {
             />
           </View>
         </View>
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Buttoncomponent fpress={() => registrarUsers()} title="CADASTRAR" />
         </View>
       </View>

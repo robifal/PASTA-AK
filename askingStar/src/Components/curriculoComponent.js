@@ -4,7 +4,7 @@ import Inputcomponent from "./inputComponent";
 const ComponentCurrirulo = ({ setCurriculo, visibilitycurriculo }) => {
   if (visibilitycurriculo) {
     return (
-      <View style={{ width: "50%", backfaceVisibility: "hidden" }}>
+      <View style={{ width: "60%", backfaceVisibility: "hidden" }}>
         <Text style={{ color: "white" }}>Curriculo</Text>
 
         <Inputcomponent

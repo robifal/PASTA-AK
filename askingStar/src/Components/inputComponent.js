@@ -1,7 +1,7 @@
 import { TextInput } from "react-native-paper";
 import { StyleSheet } from "react-native";
 
-const Inputcomponent = ({ placeholder, func, value, mode, onBlur }) => {
+const Inputcomponent = ({ placeholder, func, value, mode, onBlur, secureTextEntry }) => {
   const styles = StyleSheet.create({
     stylebutton: {
       borderWidth: 1,
@@ -20,10 +20,11 @@ const Inputcomponent = ({ placeholder, func, value, mode, onBlur }) => {
     <TextInput
       style={styles.stylebutton}
       placeholder={placeholder}
-      mode="none"
-      onChange={func}
+      mode={mode}
+      onChangeText={func}
       value={value}
       inputMode={mode}
+      secureTextEntry={secureTextEntry}
       textColor="white"
       onBlur={onBlur}
     />

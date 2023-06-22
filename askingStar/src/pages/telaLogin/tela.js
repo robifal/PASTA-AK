@@ -64,28 +64,30 @@ const Telalogin = ({ navigation }) => {
           alignItems: "center",
         }}
       >
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Text style={{ justifyContent: "center", color: "white" }}>
             Email
           </Text>
           <Inputcomponent
+            mode="email"
             func={(text) => {
-              setEmail(text.target.value);
+              setEmail(text);
             }}
             placeholder="Email"
           />
         </View>
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Text style={{ color: "white" }}>Senha:</Text>
           <Inputcomponent
+            secureTextEntry={true}
             func={(text) => {
-              setSenha(text.target.value);
+              setSenha(text);
             }}
             placeholder="Senha"
           />
         </View>
 
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Buttoncomponent
             stylebutton={styles.stylebutton}
             fpress={() => loading()}

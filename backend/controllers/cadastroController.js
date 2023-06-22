@@ -5,17 +5,17 @@ const CadastroController = {
   create: async (req, res) => {
     try {
       const cadastroAluno = {
-        nome: req.body.data.nome,
-        telephone: req.body.data.telefone,
+        name: req.body.data.name,
+        telephone: req.body.data.telephone,
         email: req.body.data.email,
-        password: req.body.data.senha,
+        password: req.body.data.password,
       };
 
       const cadastroProfessor = {
-        name: req.body.data.nome,
-        telephone: req.body.data.telefone,
+        name: req.body.data.name,
+        telephone: req.body.data.telephone,
         email: req.body.data.email,
-        password: req.body.data.senha,
+        password: req.body.data.password,
         curriculo: req.body.data.curriculo,
       };
 
@@ -26,8 +26,6 @@ const CadastroController = {
 
         res.status(401).json({ msg: "Usuario Já existente!" });
       } else {
-        console.log("Usuario não encontrado!");
-        console.log("aki");
 
         if (req.body.data.professor) {
           console.log(cadastroProfessor);
@@ -41,7 +39,9 @@ const CadastroController = {
         res.status(200).json({ msg: "Usuario Cadastrado!" });
       }
     } catch (error) {
-      console.log("error");
+      console.log(error.message);
+      res.status(500).json({ msg: error.message });
+      //console.log(JSON.stringify(error));
     }
   },
 
