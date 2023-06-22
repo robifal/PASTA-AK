@@ -21,6 +21,14 @@ const TelaMateria = ({ navigation }) => {
             id: 'artes',
             source: require('../../../img/imgs/materias/artes.png')
         },
+        {
+            id: "informatica",
+            source: require('../../../img/imgs/materias/informatica.png')
+        },
+        {
+            id: 'educacao-fisica',
+            source: require('../../../img/imgs/materias/educacaofisica.png')
+        }
 
     ];
 
