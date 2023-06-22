@@ -2,6 +2,7 @@ import { View, FlatList, Image, Pressable } from "react-native"
 import Constants from "expo-constants";
 
 
+
 const TelaMateria = ({ navigation }) => {
 
     const Card = [
@@ -31,6 +32,8 @@ const TelaMateria = ({ navigation }) => {
         }
 
     ];
+
+    
 
     return (
 
@@ -82,3 +85,5 @@ const TelaMateria = ({ navigation }) => {
 
 
 export default TelaMateria;
+
+  
