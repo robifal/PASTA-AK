@@ -6,18 +6,19 @@ export class Requisicoes {
   constructor() {}
 
   async registerUsers(data) {
-    console.log('registerUsers: ' + JSON.stringify(data));
+    console.log("registerUsers: " + JSON.stringify(data));
     const result = await axios
       .post(`${baseUrl}/api/cadastro`, {
         data: data,
       })
       .then((res) => {
-        console.log('cadastro OK:' + res);
-      }).catch(error => {
-        console.log('error:' + JSON.stringify(error));
+        console.log("cadastro OK:" + res);
+      })
+      .catch((error) => {
+        console.log("error:" + JSON.stringify(error));
       });
 
-    console.log('result:' + JSON.stringify(result));
+    console.log("result:" + JSON.stringify(result));
     return result;
   }
 

@@ -13,7 +13,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Materia"
+        initialRouteName="Perguntas"
         screenOptions={{
           headerShown: false,
         }}

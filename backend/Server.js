@@ -18,5 +18,5 @@ const routes = require("./routes/router");
 server.use("/api", routes);
 
 server.listen("3003", function () {
-  console.log("Server rodado na porta 3002!");
+  console.log("Server rodado na porta 3003!");
 });
