@@ -1,6 +1,5 @@
 import Inputcomponent from "../../Components/inputComponent";
 import Buttoncomponent from "../../Components/buttonComponent";
-import AlternativasComponent from "../../Components/alternativaComponent";
 import {
   StyleSheet,
   View,
@@ -9,7 +8,8 @@ import {
   FlatList,
 } from "react-native";
 import Constants from "expo-constants";
-import { useEffect, useState } from "react";
+import { useEffect,
+         useState } from "react";
 import { Requisicoes } from "../../services/requisicoes";
 import { TEMA_CORES } from "../../styles/color";
 import SimpleSelectButton from "react-native-simple-select-button";
@@ -21,12 +21,6 @@ const TelaCadastro = ({ navigation }) => {
     { label: "Professor", value: "professor" },
   ];
 
-  const styles = StyleSheet.create({
-    stylebutton: {
-      //backgroundColor: '#000000',
-      // borderRadius: 5
-    },
-  });
   const [value, setValue] = useState("first");
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");

@@ -1,8 +1,4 @@
 import { View, FlatList, Pressable, Text, Image } from "react-native"
-import Constants from "expo-constants";
-
-
-
 
 const TelaMateria = ({ navigation }) => {
 
@@ -55,7 +51,7 @@ const TelaMateria = ({ navigation }) => {
             }}>
                 <Image source={require('../../../img/icons/icon-menu-materia.png')} />
                 <Text style={{ fontSize: 25, fontWeight: "bold", color: "white" }}>
-                    Materia  </Text>
+                    MATERIA  </Text>
             </View>
 
 
@@ -87,10 +83,6 @@ const TelaMateria = ({ navigation }) => {
 
                 />
 
-                <Text> 
-                    testeeeeeeee
-
-                </Text>
             </View>
         </View>
 
