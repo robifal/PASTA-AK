@@ -23,17 +23,19 @@ const Telalogin = ({ navigation }) => {
   useEffect(() => {}, []);
 
   const loading = async () => {
-    const requisicoes = new Requisicoes();
-    const responseLogin = await requisicoes.loginUser({
-      data: { email: email, senha: senha },
-    });
+    // const requisicoes = new Requisicoes();
+    // const responseLogin = await requisicoes.loginUser({
+    //   data: { email: email, senha: senha },
+    // });
 
-    console.log(responseLogin);
-    setMenssage(responseLogin?.msg);
-    if (responseLogin.status) {
-      navigation.navigate("Materia");
-    }
-  };
+    // console.log(responseLogin);
+    // setMenssage(responseLogin?.msg);
+    // if (responseLogin.status) {
+
+
+        navigation.navigate("Materia");
+      
+    };
 
   return (
     <ImageBackground
@@ -52,6 +54,7 @@ const Telalogin = ({ navigation }) => {
           marginTop: Constants.statusBarHeight,
         }}
       >
+        {/* Barra Superior */}
         <Text style={{ fontSize: 25, fontWeight: "bold", color: "#0D0C67" }}>
           LOGIN
         </Text>
@@ -64,6 +67,7 @@ const Telalogin = ({ navigation }) => {
           alignItems: "center",
         }}
       >
+        {/* Campo Email */}
         <View style={{ width: "60%" }}>
           <Text style={{ justifyContent: "center", color: "white" }}>
             Email
@@ -76,6 +80,8 @@ const Telalogin = ({ navigation }) => {
             placeholder="Email"
           />
         </View>
+
+        {/* Campo Senha */}
         <View style={{ width: "60%" }}>
           <Text style={{ color: "white" }}>Senha:</Text>
           <Inputcomponent
@@ -86,6 +92,9 @@ const Telalogin = ({ navigation }) => {
             placeholder="Senha"
           />
         </View>
+        <View>
+            <Text style={{color: "white"}}>Cadastre-se </Text>
+        </View>
 
         <View style={{ width: "60%" }}>
           <Buttoncomponent
@@ -95,6 +104,7 @@ const Telalogin = ({ navigation }) => {
           />
         </View>
 
+       
         <View>
           <Text style={{ textAlign: "center", color: "red" }}>{menssage}</Text>
         </View>

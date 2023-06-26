@@ -1,5 +1,6 @@
-import { View, FlatList, Image, Pressable } from "react-native"
+import { View, FlatList, Pressable, Text, Image } from "react-native"
 import Constants from "expo-constants";
+
 
 
 
@@ -33,35 +34,44 @@ const TelaMateria = ({ navigation }) => {
 
     ];
 
-    
+
 
     return (
 
         <View style={{
             flex: 1,
-            backgroundColor: "#04154F",
-            marginTop: Constants.statusBarHeight
+            backgroundColor: "#04154F"
         }}>
+            <View style={{
+                alignItems: "center",
+                textAlign: "center",
+                backgroundColor: "#102261",
+                height: "7%",
+                width: "100%",
+                gap: 10,
+                flexDirection: "row"
+                
+
+            }}>
+                <Image source={require('../../../img/icons/icon-menu-materia.png')} />
+                <Text style={{ fontSize: 25, fontWeight: "bold", color: "white" }}>
+                    Materia  </Text>
+            </View>
 
 
             <View style={{
                 flex: 1,
                 alignItems: 'center',
-                // justifyContent: 'center',
                 gap: 10,
-                // marginVertical: "45%",
-                // height: 600
-
-
             }}>
-                <FlatList 
+                <FlatList
                     data={Card}
                     renderItem={({ item }) => (
                         <View style={{
 
                         }}>
                             <Pressable onPress={() => navigation.navigate("Game", { id: item.id })}>
-                                <Image source={item.source}/>
+                                <Image source={item.source} />
                             </Pressable>
                             <View style={{
                                 marginVertical: 5,
@@ -76,14 +86,18 @@ const TelaMateria = ({ navigation }) => {
                     }
 
                 />
-            </View>
 
+                <Text> 
+                    testeeeeeeee
+
+                </Text>
+            </View>
         </View>
 
+
     );
-}
+};
 
 
 export default TelaMateria;
 
-  

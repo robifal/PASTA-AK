@@ -6,18 +6,21 @@ import Quiz from "./src/pages/telaQuiz/game";
 import TelaMateria from "./src/pages/telaMateria/telaMateria";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { StatusBar } from "react-native";
 
 const App = () => {
   const Stack = createNativeStackNavigator();
 
   return (
+    <>
+    <StatusBar barStyle={"dark-content"}  />
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Perguntas"
+        initialRouteName="Materia"
         screenOptions={{
           headerShown: false,
         }}
-      >
+        >
         <Stack.Screen name="Inicial" component={TelaInicial} />
 
         <Stack.Screen name="Cadastro" component={TelaCadastro} />
@@ -31,6 +34,7 @@ const App = () => {
         <Stack.Screen name="Perguntas" component={Perguntas} />
       </Stack.Navigator>
     </NavigationContainer>
+        </>
   );
 };
 

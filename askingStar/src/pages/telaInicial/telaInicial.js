@@ -22,16 +22,17 @@ const TelaInicial = ({navigation}) => {
 
     <ImageBackground resizeMode="cover" style={{flex: 1}} source={require("../../../img/background-ask.png")} >
 
-
+        {/* Botão Conectar */}
         <View style={{flex: 1,gap: 10, justifyContent: 'center' , alignItems: 'center' }}>
          
           <View style={{width:"50%"}}>
           <Buttoncomponent 
           color="#0D0C67"
-          stylebutton={styles.stylebutton} fpress={() => loading("Entrar")} title="CONECTAR"/>
+          stylebutton={styles.stylebutton} fpress={() => navigation.navigate("Entrar")} title="CONECTAR"/>
 
           </View>
 
+            {/* Botão Cadastrar */}
             <View style={{width:"50%"}}>
           <Buttoncomponent 
           color="#0D0C67"
