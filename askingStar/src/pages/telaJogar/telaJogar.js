@@ -26,7 +26,7 @@ const TelaJogar = () => {
         </View>
 
         <View style={{ width: "60%" }}>
-          <Buttoncomponent fpress={() => navigation.navigate("Materia")} title="Jogar" />
+          <Buttoncomponent fpress={() => navigation.navigate("Materia")} buttonColor="white" title="JOGAR" />
         </View>
 
         </View>
