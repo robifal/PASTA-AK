@@ -14,30 +14,30 @@ const App = () => {
 
   return (
     <>
-    <StatusBar barStyle={"dark-content"}  />
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Jogar"
-        screenOptions={{
-          headerShown: false,
-        }}
+      <StatusBar barStyle={"dark-content"} />
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Inicial"
+          screenOptions={{
+            headerShown: false,
+          }}
         >
-        <Stack.Screen name="Inicial" component={TelaInicial} />
+          <Stack.Screen name="Inicial" component={TelaInicial} />
 
-        <Stack.Screen name="Cadastro" component={TelaCadastro} />
+          <Stack.Screen name="Cadastro" component={TelaCadastro} />
 
-        <Stack.Screen name="Entrar" component={Telalogin} />
+          <Stack.Screen name="Entrar" component={Telalogin} />
 
-        <Stack.Screen name="Jogar" component={TelaJogar} />  
+          <Stack.Screen name="Jogar" component={TelaJogar} />
 
-        <Stack.Screen name="Materia" component={TelaMateria} />
+          <Stack.Screen name="Materia" component={TelaMateria} />
 
-        <Stack.Screen name="Game" component={Quiz} />
+          <Stack.Screen name="Game" component={Quiz} />
 
-        <Stack.Screen name="Perguntas" component={Perguntas} />
-      </Stack.Navigator>
-    </NavigationContainer>
-        </>
+          <Stack.Screen name="Perguntas" component={Perguntas} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 };
 

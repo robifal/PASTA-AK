@@ -32,10 +32,8 @@ const Telalogin = ({ navigation }) => {
     // setMenssage(responseLogin?.msg);
     // if (responseLogin.status) {
 
-
-        navigation.navigate("Materia");
-      
-    };
+    navigation.navigate("Jogar");
+  };
 
   return (
     <ImageBackground
@@ -93,7 +91,7 @@ const Telalogin = ({ navigation }) => {
           />
         </View>
         <View>
-            <Text style={{color: "white"}}>Cadastre-se </Text>
+          <Text style={{ color: "white" }}>Cadastre-se </Text>
         </View>
 
         <View style={{ width: "60%" }}>
@@ -104,7 +102,6 @@ const Telalogin = ({ navigation }) => {
           />
         </View>
 
-       
         <View>
           <Text style={{ textAlign: "center", color: "red" }}>{menssage}</Text>
         </View>

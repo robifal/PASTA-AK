@@ -25,12 +25,6 @@ const Perguntas = ({ navigation }) => {
     console.log(alternative);
   };
 
-  const questionDocument = {
-    question: question,
-    alternative: alternative,
-    response: response,
-  };
-
   userEffect(() => {}, []);
 
   const registerQuestion = async () => {};
