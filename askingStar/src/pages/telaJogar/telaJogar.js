@@ -15,6 +15,7 @@ const TelaJogar = ({ navigation }) => {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
+          marginTop: "30%"
         }}
       >
         <View>
@@ -26,7 +27,7 @@ const TelaJogar = ({ navigation }) => {
           </Text>
         </View>
 
-        <View style={{ width: "60%" }}>
+        <View style={{ width: "60%", marginTop: "5%" }}>
           <Buttoncomponent
             fpress={() => navigation.navigate("Materia")}
             buttonColor="white"

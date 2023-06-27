@@ -17,7 +17,7 @@ const App = () => {
       <StatusBar barStyle={"dark-content"} />
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Inicial"
+          initialRouteName="Jogar"
           screenOptions={{
             headerShown: false,
           }}
