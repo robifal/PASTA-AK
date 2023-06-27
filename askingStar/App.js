@@ -5,6 +5,7 @@ import Perguntas from "./src/pages/CadastroPerguntas/index";
 import Quiz from "./src/pages/telaQuiz/game";
 import TelaJogar from "./src/pages/telaJogar/telaJogar";
 import TelaMateria from "./src/pages/telaMateria/telaMateria";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StatusBar } from "react-native";

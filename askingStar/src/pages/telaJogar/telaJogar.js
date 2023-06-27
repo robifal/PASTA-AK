@@ -1,4 +1,5 @@
 import { View, Text, ImageBackground } from "react-native";
+
 import Buttoncomponent from "../../Components/buttonComponent";
 
 const TelaJogar = ({ navigation }) => {
