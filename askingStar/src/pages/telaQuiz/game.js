@@ -81,8 +81,9 @@ const Quiz = ({ navigation,route }) => {
 
 
                     </View>
+                            {/* Botão Submit */}
                             <View style={{marginTop: 20}}>
-                            <Buttoncomponent buttonColor={TEMA_CORES.complement.tertiaryazulc} color="#D9D9D9" fpress={() => loading()} title="Submit" />
+                            <Buttoncomponent buttonColor={TEMA_CORES.complement.secundarylesc} color="#D9D9D9" fpress={() => loading()} title="Submit" />
                             </View>
 
 

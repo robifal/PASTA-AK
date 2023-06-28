@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, Image } from "react-native";
 import { Button } from "react-native-paper";
 import Inputcomponent from "../../Components/inputComponent";
 import Buttoncomponent from "../../Components/buttonComponent";
@@ -19,8 +19,10 @@ const TelaInicial = ({ navigation }) => {
     <ImageBackground
       resizeMode="cover"
       style={{ flex: 1 }}
-      source={require("../../../img/background-ask.png")}
+      source={require("../../../img/background.png")}
     >
+
+     
       {/* Botão Conectar */}
       <View
         style={{
@@ -28,9 +30,10 @@ const TelaInicial = ({ navigation }) => {
           gap: 10,
           justifyContent: "center",
           alignItems: "center",
+          marginTop: "5%"
         }}
       >
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Buttoncomponent
             color="#0D0C67"
             stylebutton={styles.stylebutton}
@@ -40,7 +43,7 @@ const TelaInicial = ({ navigation }) => {
         </View>
 
         {/* Botão Cadastrar */}
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "60%" }}>
           <Buttoncomponent
             color="#0D0C67"
             stylebutton={styles.stylebutton}
@@ -49,6 +52,7 @@ const TelaInicial = ({ navigation }) => {
           />
         </View>
       </View>
+     
     </ImageBackground>
   );
 };
