@@ -1,19 +1,16 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:3006";
+const baseUrl = "http://10.220.30.171:3003";
 
 export class Requisicoes {
   constructor() {}
 
   async registerUsers(data) {
-    console.log("registerUsers: " + JSON.stringify(data));
     const result = await axios
       .post(`${baseUrl}/api/cadastro`, {
         data: data,
       })
-      .then((res) => {
-        console.log("cadastro OK:" + res);
-      })
+      .then((res) => res)
       .catch((error) => {
         console.log("error:" + JSON.stringify(error));
       });
@@ -46,16 +43,19 @@ export class Requisicoes {
     const resultPerguntas = await axios
       .post(`${baseUrl}/api/perguntas`, {})
       .then((res) => res);
-    console.log(resultPerguntas);
     return resultPerguntas;
   }
 
   async portuguesQuestion({}) {
-    const resultPortgues = await axios
-      .get(`${baseUrl}/api/portugues`, {})
-      .then((res) => res);
-    console.log(resultPortgues);
-    return resultPortgues;
+    console.log("entrou");
+    const { data } = await axios
+      .get(`${baseUrl}/api/portugues/listportugues`)
+      .then((res) => res)
+      .catch((erro) => {
+        console.log(erro);
+      });
+
+    console.log(data);
   }
 
   async matematicaQuestion({}) {
