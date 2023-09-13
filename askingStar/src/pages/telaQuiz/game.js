@@ -1,12 +1,16 @@
-import { View, Text } from "react-native"
+import { Pressable, View} from "react-native"
 import Constants from "expo-constants";
 import AlternativasComponent from "../../Components/alternativaComponent";
 import Buttoncomponent from "../../Components/buttonComponent";
 import { TEMA_CORES } from "../../styles/color";
+import { useState } from "react";
+
 
 
 
 const Quiz = ({ navigation,route }) => {
+
+const [modalVisivel, setModalVisivel] = useState(false);
 
     const {id}=route.params
     console.log(id);
@@ -82,9 +86,25 @@ const Quiz = ({ navigation,route }) => {
 
                     </View>
                             {/* Botão Submit */}
-                            <View style={{marginTop: 20}}>
-                            <Buttoncomponent buttonColor={TEMA_CORES.complement.secundarylesc} color="#D9D9D9" fpress={() => loading()} title="Submit" />
+                            <View>
+                                <Modal
+                                animationType="slide"
+                                transparent={true}
+                                visible={ModalVisivel}
+                                onRequestClose={() => {
+                                    Alert.alert('Modal está fechado.');
+                                    setModalVisivel(!modalVisivel)
+                                }}>
+                                    <Text> AAAAA </Text>
+                                    <Pressable onPress={() => setModalVisivel(!modalVisivel)}>
+                                        <Text>Hide</Text> 
+                                    </Pressable>
+                                </Modal>
+                                <Pressable onPress={() => setModalVisivel(true)}>
+                                <Text>mostrar</Text>    
+                                </Pressable>
                             </View>
+                           
 
 
                 </View>
