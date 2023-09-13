@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { TEMA_CORES } from '../styles/color';
 
 
-const AlternativasComponent = ({ Array, 
+const AlternativasComponent = ({ Array, setQuestion, question,
     iconColor = TEMA_CORES.complement.quaternyazul, 
     buttonSelectedColor = TEMA_CORES.complement.secundarylesc,
     buttonDefaultColor = TEMA_CORES.secundarypink,
@@ -14,9 +14,6 @@ const AlternativasComponent = ({ Array,
 
 }) => {
 
-    const [choice, setChoice] = useState('');
-
-    console.log(choice);
 
     const Separator = () => {
 
@@ -39,8 +36,8 @@ const AlternativasComponent = ({ Array,
             ({ item }) =><View style={{}}>
 
             <SimpleSelectButton
-            onPress={() => setChoice(item.value)}
-            isChecked={choice === item.value}
+            onPress={() => setQuestion(item.value)}
+            isChecked={question === item.value}
             text={item.label}
             textSize={14}
             // iconName="checkcircleo"

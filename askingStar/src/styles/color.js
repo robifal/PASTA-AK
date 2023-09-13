@@ -13,8 +13,11 @@ export const TEMA_CORES = {
         secundaryblack: "#000000"
     },
     classic:{
-        white: "#D9D9D9",
+        white: "#s",
         black: "#000000"
+    },
+    text:{
+        primaryblue: "#04154F"
     }
 
 };

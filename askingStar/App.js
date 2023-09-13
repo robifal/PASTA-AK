@@ -18,7 +18,7 @@ const App = () => {
       <StatusBar barStyle={"dark-content"} />
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Game"
+          initialRouteName="Resultado"
           screenOptions={{
             headerShown: false,
           }}
@@ -36,6 +36,8 @@ const App = () => {
           <Stack.Screen name="Game" component={Quiz} />
 
           <Stack.Screen name="Perguntas" component={Perguntas} />
+
+          
         </Stack.Navigator>
       </NavigationContainer>
     </>
