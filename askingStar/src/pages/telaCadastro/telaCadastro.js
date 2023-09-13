@@ -8,8 +8,7 @@ import {
   FlatList,
 } from "react-native";
 import Constants from "expo-constants";
-import { useEffect,
-         useState } from "react";
+import { useEffect, useState } from "react";
 import { Requisicoes } from "../../services/requisicoes";
 import { TEMA_CORES } from "../../styles/color";
 import SimpleSelectButton from "react-native-simple-select-button";
@@ -39,7 +38,6 @@ const TelaCadastro = ({ navigation }) => {
     professor: professor === "professor" ? true : false,
   };
 
-
   useEffect(() => {}, []);
 
   const registrarUsers = async () => {
@@ -47,8 +45,6 @@ const TelaCadastro = ({ navigation }) => {
     const response = await requisicoes.registerUsers(dadosUser);
 
     navigation.navigate("Entrar");
-
-    
   };
 
   function exibirButton(value) {
@@ -130,7 +126,7 @@ const TelaCadastro = ({ navigation }) => {
           <Text style={{ color: "white" }}>Coloque Sua Senha</Text>
 
           <Inputcomponent
-          secureTextEntry={true}
+            secureTextEntry={true}
             func={(text) => {
               setSenha(text);
             }}
