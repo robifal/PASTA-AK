@@ -1,5 +1,5 @@
 
-import { View, Text, Pressable, Modal, StyleSheet } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
 import Constants from "expo-constants";
 import AlternativasComponent from "../../Components/alternativaComponent";
@@ -26,7 +26,7 @@ const Quiz = ({ navigation, route }) => {
     })();
   }, []);
 
-  const [modalVisivel, setModalVisivel] = useState(false);
+ 
   const [question, setQuestion] = useState()
 
  async function handleQuestion({question}) {
@@ -120,17 +120,5 @@ const Quiz = ({ navigation, route }) => {
 
   );
 };
-const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    width: 200,
-    height: 200,
-    backgroundColor: "white",
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 5,
-    position: "absolute",
 
-  }
-})
 export default Quiz;
