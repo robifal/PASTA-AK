@@ -1,0 +1,53 @@
+[
+    {
+      "pergunta": "Qual é o maior planeta do nosso sistema solar?",
+      "alternativas": ["Marte", "Vênus", "Júpiter", "Saturno"],
+      "resposta": "Júpiter"
+    },
+    {
+      "pergunta": "Qual é o país com a maior população do mundo?",
+      "alternativas": ["Índia", "Estados Unidos", "China", "Brasil"],
+      "resposta": "China"
+    },
+    {
+      "pergunta": "Qual é a capital do Canadá?",
+      "alternativas": ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+      "resposta": "Ottawa"
+    },
+    {
+      "pergunta": "Quem escreveu a obra 'Dom Quixote'?",
+      "alternativas": ["Miguel de Cervantes", "William Shakespeare", "F. Scott Fitzgerald", "Leo Tolstoy"],
+      "resposta": "Miguel de Cervantes"
+    },
+    {
+      "pergunta": "Qual é o rio mais longo do mundo?",
+      "alternativas": ["Rio Nilo", "Rio Amazonas", "Rio Mississippi", "Rio Yangtzé"],
+      "resposta": "Rio Amazonas"
+    },
+    {
+      "pergunta": "Qual é o elemento químico mais abundante na crosta terrestre?",
+      "alternativas": ["Hidrogênio", "Oxigênio", "Silício", "Alumínio"],
+      "resposta": "Oxigênio"
+    },
+    {
+      "pergunta": "Quem pintou a 'Mona Lisa'?",
+      "alternativas": ["Pablo Picasso", "Vincent van Gogh", "Leonardo da Vinci", "Michelangelo"],
+      "resposta": "Leonardo da Vinci"
+    },
+    {
+      "pergunta": "Quantos planetas fazem parte do sistema solar?",
+      "alternativas": ["5", "8", "9", "10"],
+      "resposta": "8"
+    },
+    {
+      "pergunta": "Qual é a maior cordilheira do mundo?",
+      "alternativas": ["Cordilheira dos Andes", "Montanhas Rochosas", "Cordilheira do Himalaia", "Cordilheira dos Alpes"],
+      "resposta": "Cordilheira dos Andes"
+    },
+    {
+      "pergunta": "Quem foi o primeiro ser humano a pisar na Lua?",
+      "alternativas": ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "John Glenn"],
+      "resposta": "Neil Armstrong"
+    }
+  ]
+  

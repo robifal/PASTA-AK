@@ -6,9 +6,14 @@ import { TEMA_CORES } from "../../styles/color";
  const QuizConcluido = ({}) => {
 
     return(
+        <View style={{
+            flex: 1,
+            height: "100%",
+            backgroundColor: "red"}}>
+
     <ImageBackground 
     resizeMode="cover"
-    style={{Flex: 1}}
+    style={{flex: 1}}
     source={require("../../../img/fundoQuizConcluido.png")}>
 
         <View style={{ 
@@ -54,6 +59,7 @@ import { TEMA_CORES } from "../../styles/color";
             </View>
         </View>
 </ImageBackground>
+</View>
 
     )
  }

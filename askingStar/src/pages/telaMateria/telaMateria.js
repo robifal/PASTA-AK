@@ -46,7 +46,7 @@ const TelaMateria = ({ navigation }) => {
                 width: "100%",
                 gap: 10,
                 flexDirection: "row"
-                
+
 
             }}>
                 <Image source={require('../../../img/icons/icon-menu-materia.png')} />

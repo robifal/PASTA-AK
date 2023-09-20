@@ -1,16 +1,15 @@
 import SimpleSelectButton from 'react-native-simple-select-button';
 import { FlatList, View } from 'react-native';
-import { useState } from 'react';
 import { TEMA_CORES } from '../styles/color';
+import { Button } from 'react-native-paper';
 
-
-const AlternativasComponent = ({ Array, setQuestion, question,
-    iconColor = TEMA_CORES.complement.quaternyazul, 
+const AlternativasComponent = ({ Array, setQuestion, question, handleResponder,
+    iconColor = TEMA_CORES.complement.quaternyazul,
     buttonSelectedColor = TEMA_CORES.complement.secundarylesc,
     buttonDefaultColor = TEMA_CORES.secundarypink,
     textDefaultColor = TEMA_CORES.complement.quaternyazul,
     textSelectedColor = TEMA_CORES.secundarypink,
-    horizontal, styleAlt
+    horizontal,
 
 }) => {
 
@@ -19,40 +18,39 @@ const AlternativasComponent = ({ Array, setQuestion, question,
 
         return (
             <View
-                style={{width: 50}}>
+                style={{ width: 10 }}>
             </View>
         )
     }
 
-    return(
-        <View style={{ flex:1}}> 
+    return (
+        <View style={{ flex: 1 }}>
 
-        <FlatList 
-        ItemSeparatorComponent={Separator}
-        style={{ gap: 10}}
-        horizontal={horizontal}
-        data={Array}
-        renderItem={
-            ({ item }) =><View style={{}}>
+            <FlatList
+                ItemSeparatorComponent={Separator}
+                style={{ gap: 10 }}
+                horizontal={horizontal}
+                data={Array}
+                renderItem={
+                    ({ item }) => {
+                        return <View style={{}}>
+                            <SimpleSelectButton
+                                onPress={() => setQuestion(item)}
+                                isChecked={question === item}
+                                text={item}
+                                textSize={14}
+                                buttonDefaultColor={buttonDefaultColor}
+                                buttonSelectedColor={buttonSelectedColor}
+                                textDefaultColor={textDefaultColor}
+                                textSelectedColor={textSelectedColor}
 
-            <SimpleSelectButton
-            onPress={() => setQuestion(item.value)}
-            isChecked={question === item.value}
-            text={item.label}
-            textSize={14}
-            // iconName="checkcircleo"
-            // iconColor={iconColor}
-            // iconSize={14}
-            buttonDefaultColor={buttonDefaultColor}
-            buttonSelectedColor={buttonSelectedColor}
-            textDefaultColor={textDefaultColor}
-            textSelectedColor={textSelectedColor}
-            
-            
+
+                            />
+                        </View>
+                    }
+                }
             />
-            </View>
-        }
-        />
+            <Button onPress={ () => handleResponder()} style={{borderWidth: 1}}> text</Button>
         </View>
     )
 
