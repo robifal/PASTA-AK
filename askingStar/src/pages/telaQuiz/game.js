@@ -1,4 +1,3 @@
-
 import { View, Text } from "react-native";
 import React from "react";
 import Constants from "expo-constants";
@@ -8,23 +7,22 @@ import { useState } from "react";
 import requestsQuestions from "../../services/questions";
 import axios from "axios";
 import QuestionScreen from "../../Components/questionsComponent";
-import data from "../../perguntas.json"
+import data from "../../perguntas.json";
 
 const Quiz = ({ navigation, route }) => {
-  const { id } = route.params;
   //   React.useEffect(() => {
   //     (async () => {
   //       const response = requestsQuestions.portuguesList();
-  //       console.log(response);
+  //
+  //console.log(response);
   //     })();
   //   }, []);
-
 
   //   const [question, setQuestion] = useState()
 
   //  async function handleQuestion({question}) {
 
-  //   await axios.post("url", { 
+  //   await axios.post("url", {
   //     questionSelect: question
   //   })
 
@@ -32,11 +30,18 @@ const Quiz = ({ navigation, route }) => {
 
   const [perguntaAtual, setPerguntaAtual] = useState(0);
 
+  const [pontos, setPontos] = React.useState(0);
+
   const handleNextQuestion = () => {
     if (perguntaAtual < data.length - 1) {
       setPerguntaAtual(perguntaAtual + 1);
     } else {
       // Você chegou ao final das perguntas, pode mostrar uma mensagem ou fazer algo aqui.
+      console.log(pontos);
+      navigation.navigate("QuizConcluido", {
+        pontos: pontos,
+      });
+      return;
     }
   };
 
@@ -48,13 +53,14 @@ const Quiz = ({ navigation, route }) => {
           alternativas={data[perguntaAtual].alternativas}
           respostaCorreta={data[perguntaAtual].resposta}
           onNext={handleNextQuestion}
+          setPontos={setPontos}
+          pontos={pontos}
         />
       ) : (
         <Text>Você concluiu todas as perguntas!</Text>
       )}
     </View>
   );
-
 
   // return (
 
@@ -88,7 +94,6 @@ const Quiz = ({ navigation, route }) => {
   //       alignItems: 'center',
 
   //     }}>
-
 
   //       <View style={{
   //         height: '70%',
@@ -127,14 +132,10 @@ const Quiz = ({ navigation, route }) => {
 
   //           </View>
 
-
-
   //         </View>
   //       </View>
   //     </View>
   //   </View>
-
-
 
   // );
 };
