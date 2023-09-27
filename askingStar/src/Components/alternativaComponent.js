@@ -2,6 +2,7 @@ import SimpleSelectButton from 'react-native-simple-select-button';
 import { FlatList, View } from 'react-native';
 import { TEMA_CORES } from '../styles/color';
 import { Button } from 'react-native-paper';
+import Buttoncomponent from './buttonComponent';
 
 const AlternativasComponent = ({ Array, setQuestion, question, handleResponder,
     iconColor = TEMA_CORES.complement.quaternyazul,
@@ -50,7 +51,11 @@ const AlternativasComponent = ({ Array, setQuestion, question, handleResponder,
                     }
                 }
             />
-            <Button onPress={ () => handleResponder()} style={{borderWidth: 1}}> text</Button>
+            <Buttoncomponent
+              buttonColor={TEMA_CORES.complement.secundarylesc}
+              color="#D9D9D9"
+              fpress={() => handleResponder()}
+              title="Submit" />
         </View>
     )
 

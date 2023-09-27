@@ -18,11 +18,9 @@ const Perguntas = ({ navigation }) => {
   const [response, setRespost] = useState();
 
   const setAlternativa = (alternativa) => {
-    console.log(alternativa);
     const teste = [{ alternativa }];
     setAlter([...alternative, alternativa]);
 
-    console.log(alternative);
   };
 
   userEffect(() => {}, []);
@@ -74,7 +72,6 @@ const Perguntas = ({ navigation }) => {
           <Text style={{ color: "white" }}>Alternativa 1</Text>
           <Inputcomponent
             func={(text) => {
-              console.log(text.target.value);
               setAlternativa({ alter1: text.target.value });
             }}
             placeholder="Alternativa 1"
@@ -84,7 +81,6 @@ const Perguntas = ({ navigation }) => {
           <Text style={{ color: "white" }}>Alternativa 2</Text>
           <Inputcomponent
             func={(text) => {
-              console.log(text.target.value);
               setAlternativa({ alter2: text.target.value });
             }}
             placeholder="Alternativa 2"
@@ -94,7 +90,6 @@ const Perguntas = ({ navigation }) => {
           <Text style={{ color: "white" }}>Alternativa 3</Text>
           <Inputcomponent
             func={(text) => {
-              console.log(text.target.value);
               setAlternativa({ alter3: text.target.value });
             }}
             placeholder="Alternativa 3"

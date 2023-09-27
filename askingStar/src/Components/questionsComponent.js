@@ -14,13 +14,15 @@ const QuestionScreen = ({
   console.log(pontos);
 
   const [resposta, setResposta] = React.useState(null);
-  console.log("resposta", resposta);
+  console.log( resposta);
 
   const handleResponder = () => {
     if (resposta === respostaCorreta) {
       // Lógica para resposta correta
       setPontos(pontos + 1);
       setResposta(null);
+    }else{
+      setResposta(null)
     }
     if (resposta !== "" && resposta !== undefined && resposta !== null) {
       onNext(); // Avança para a próxima pergunta
@@ -28,8 +30,8 @@ const QuestionScreen = ({
   };
 
   return (
-    <View>
-      <Text>{pergunta}</Text>
+    <View style={{justifyContent: "center", alignItems:"center"}}>
+      <Text style={{color: "white"}}>{pergunta}</Text>
 
       <View style={{ width: 200, height: 400 }}>
         <AlternativasComponent

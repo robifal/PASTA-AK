@@ -2,15 +2,10 @@ import { View, Text, ImageBackground } from "react-native";
 import Buttoncomponent from "../../Components/buttonComponent";
 import { TEMA_CORES } from "../../styles/color";
 
-const QuizConcluido = ({route}) => {
-    const {pontos} = route.params
+const QuizConcluido = ({route, navigation}) => {
+    const {pontos, numQuestions} = route.params
     console.log(pontos);
-  function TextResult() {
-    if (pontos < 3) {
-      <Text>teste</Text>;
-    }
-  }
-
+    
   return (
     <View
       style={{
@@ -63,7 +58,7 @@ const QuizConcluido = ({route}) => {
               }}
             >
               {" "}
-              Você acertou 100% das questões, agora é um(a) Super Estrela.{" "}
+              Você acertou {pontos}/{numQuestions} das questões, agora é um(a) Super Estrela.{" "}
             </Text>
           </View>
           <View style={{ width: "60%" }}>
