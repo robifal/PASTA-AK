@@ -8,7 +8,6 @@ import requestsQuestions from "../../services/questions";
 import axios from "axios";
 import QuestionScreen from "../../Components/questionsComponent";
 import data from "../../perguntas.json";
-
 const Quiz = ({ navigation, route }) => {
   //   React.useEffect(() => {
   //     (async () => {
@@ -28,10 +27,14 @@ const Quiz = ({ navigation, route }) => {
 
   //   }
 
+
+  
+  const [listQuestions, setListQuestions] = React.useState([])
+  console.log(listQuestions);
   const [perguntaAtual, setPerguntaAtual] = useState(0);
   const [finishGame, setFinishGame] = useState(false)
   const [pontos, setPontos] = React.useState(0);
-
+  
   function handleFinishGame() {
     navigation.navigate("QuizConcluido", {
       pontos: pontos,
@@ -49,6 +52,16 @@ const Quiz = ({ navigation, route }) => {
       return;
     }
   };
+  
+  React.useEffect( () =>{
+    
+    const idMateria = route.params
+    data.map( (item) => {
+        if(item.idMateria == idMateria)
+        return setListQuestions(item.perguntas)
+      })
+
+  },[])
 
 
   useEffect(() => {

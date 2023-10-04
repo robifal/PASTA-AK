@@ -1,30 +1,42 @@
 import { View, FlatList, Pressable, Text, Image } from "react-native"
+import data from "../../perguntas.json"
 
 const TelaMateria = ({ navigation }) => {
 
     const Card = [
         {
             id: 'portugues',
+            idMateria: "1",
             source: require('../../../img/imgs/materias/portugues.png')
         },
         {
             id: 'matematica',
+            idMateria: "2",
+
             source: require('../../../img/imgs/materias/matematica.png')
         },
         {
             id: 'historia',
+            idMateria: "3",
+
             source: require('../../../img/imgs/materias/historia.png')
         },
         {
             id: 'artes',
+            idMateria: "4",
+
             source: require('../../../img/imgs/materias/artes.png')
         },
         {
             id: "informatica",
+            idMateria: "5",
+
             source: require('../../../img/imgs/materias/informatica.png')
         },
         {
             id: 'educacao-fisica',
+            idMateria: "6",
+
             source: require('../../../img/imgs/materias/educacaofisica.png')
         }
 
@@ -66,7 +78,7 @@ const TelaMateria = ({ navigation }) => {
                         <View style={{
 
                         }}>
-                            <Pressable onPress={() => navigation.navigate("Game", { id: item.id })}>
+                            <Pressable onPress={() => navigation.navigate("Game", { idMateria: item.idMateria })}>
                                 <Image source={item.source} />
                             </Pressable>
                             <View style={{
