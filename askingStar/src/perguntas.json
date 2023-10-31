@@ -6,306 +6,55 @@
     "perguntas": [
       {
         "pergunta": "Qual é o plural de 'casa'?",
-        "alternativas": ["Casas", "Casaes", "Casais", "Case"],
-        "resposta": "Casas"
+        "alternativas": ["a) casas", "b) casaes", "c) casais", "d) case"],
+        "resposta": "a) casas"
       },
       {
         "pergunta": "Qual é o antônimo de 'alegre'?",
-        "alternativas": ["Triste", "Feliz", "Contente", "Radiante"],
-        "resposta": "Triste"
+        "alternativas": ["a) triste", "b) feliz", "c) contente", "d) radiante"],
+        "resposta": "a) triste"
       },
       {
         "pergunta": "Qual é a figura de linguagem que consiste na repetição de sons consonantais no início das palavras?",
-        "alternativas": ["Metáfora", "Aliteração", "Anáfora", "Hipérbole"],
-        "resposta": "Aliteração"
+        "alternativas": ["a) metáfora", "b) aliteração", "c) anáfora", "d) hipérbole"],
+        "resposta": "b) aliteração"
       },
       {
         "pergunta": "Qual é o sujeito da frase 'O gato preto cruzou a rua correndo'?",
-        "alternativas": ["Gato preto", "Cruzou", "Rua", "Correndo"],
-        "resposta": "Gato preto"
+        "alternativas": ["a) gato preto", "b) cruzou", "c) rua", "d) correndo"],
+        "resposta": "a) gato preto"
       },
       {
         "pergunta": "Qual é o plural de 'país'?",
-        "alternativas": ["Paísos", "Paízes", "Páises", "Países"],
-        "resposta": "Países"
+        "alternativas": ["a) paísos", "b) paízes", "c) páises", "d) países"],
+        "resposta": "d) países"
       },
       {
         "pergunta": "Qual é o verbo na forma imperativa na frase 'Feche a porta'?",
-        "alternativas": ["Feche", "Porta", "A", "A porta"],
-        "resposta": "Feche"
+        "alternativas": ["a) Feche", "b) porta", "c) a", "d) a porta"],
+        "resposta": "a) Feche"
       },
       {
         "pergunta": "Qual é a função da conjunção na frase 'Eu gosto de estudar, mas detesto fazer provas'?",
-        "alternativas": ["Substantivo", "Verbo", "Conjunção", "Advérbio"],
-        "resposta": "Conjunção"
+        "alternativas": ["a) Substantivo", "b) Verbo", "c) Conjunção", "d) Advérbio"],
+        "resposta": "c) Conjunção"
       },
       {
         "pergunta": "O que é um sinônimo de 'rápido'?",
-        "alternativas": ["Lento", "Veloz", "Pequeno", "Alto"],
-        "resposta": "Veloz"
+        "alternativas": ["a) lento", "b) veloz", "c) pequeno", "d) alto"],
+        "resposta": "b) veloz"
       },
       {
         "pergunta": "Qual é a forma correta da palavra composta que significa 'meio-dia'?",
-        "alternativas": ["Meio dia", "Meiodia", "Meio-dia", "Meiodía"],
-        "resposta": "Meio-dia"
+        "alternativas": ["a) meio dia", "b) meiodia", "c) meio-dia", "d) meiodía"],
+        "resposta": "c) meio-dia"
       },
       {
         "pergunta": "Qual é a classe gramatical da palavra 'amor'?",
-        "alternativas": ["Verbo", "Adjetivo", "Substantivo", "Advérbio"],
-        "resposta": "Substantivo"
+        "alternativas": ["a) Verbo", "b) Adjetivo", "c) Substantivo", "d) Advérbio"],
+        "resposta": "c) Substantivo"
       }
     ]
     
-  },
-  {
-    "id":"2",
-    "materia": "matemática",
-    "idMateria": "3",
-    "perguntas": 
-    [
-  {
-    "pergunta": "Qual é o resultado da seguinte operação: 7 + 3?",
-    "alternativas": ["10", "14", "21", "4"],
-    "resposta": "10"
-  },
-  {
-    "pergunta": "Qual é o valor de π (pi) aproximado?",
-    "alternativas": ["3.14", "2.71", "1.61", "4.23"],
-    "resposta": "3.14"
-  },
-  {
-    "pergunta": "Qual é o resultado da seguinte operação: 5 x 8?",
-    "alternativas": ["45", "40", "13", "64"],
-    "resposta": "40"
-  },
-  {
-    "pergunta": "Qual é o resultado da seguinte operação: 12 ÷ 4?",
-    "alternativas": ["2", "3", "4", "6"],
-    "resposta": "3"
-  },
-  {
-    "pergunta": "Qual é a raiz quadrada de 25?",
-    "alternativas": ["5", "10", "15", "25"],
-    "resposta": "5"
-  },
-  {
-    "pergunta": "Qual é o resultado da seguinte operação: 9 - 7?",
-    "alternativas": ["14", "2", "16", "0"],
-    "resposta": "2"
-  },
-  {
-    "pergunta": "Qual é o resultado da seguinte operação: 6² (6 elevado à segunda potência)?",
-    "alternativas": ["12", "36", "72", "18"],
-    "resposta": "36"
-  },
-  {
-    "pergunta": "Qual é o resultado da seguinte operação: 15 + 8 - 3?",
-    "alternativas": ["20", "10", "5", "25"],
-    "resposta": "20"
-  },
-  {
-    "pergunta": "Qual é o resultado da seguinte operação: (10 ÷ 2) x 4?",
-    "alternativas": ["20", "10", "15", "5"],
-    "resposta": "20"
-  },
-  {
-    "pergunta": "Qual é o valor de 2³ (2 elevado à terceira potência)?",
-    "alternativas": ["8", "6", "16", "12"],
-    "resposta": "8"
-  }
-]
-
-  },{
-    "id": "3",
-    "materia": "Informatica",
-    "idMateria": "4",
-    "perguntas": [
-      {
-        "pergunta": "O que significa a sigla 'URL'?",
-        "alternativas": [
-          "Universal Resource Locator",
-          "Uniform Resource Locator",
-          "Universal Resource Link",
-          "Uniform Resource Link"
-        ],
-        "resposta": "Uniform Resource Locator"
-      },
-      {
-        "pergunta": "Qual dos seguintes não é um sistema operacional?",
-        "alternativas": ["Windows", "MacOS", "Linux", "Office"],
-        "resposta": "Office"
-      },
-      {
-        "pergunta": "O que é um 'firewall'?",
-        "alternativas": [
-          "Um programa de edição de imagens",
-          "Um dispositivo de rede que controla o tráfego",
-          "Um software de gerenciamento de projetos",
-          "Um aplicativo de mensagens instantâneas"
-        ],
-        "resposta": "Um dispositivo de rede que controla o tráfego"
-      },
-      {
-        "pergunta": "O que é um 'backup' de dados?",
-        "alternativas": [
-          "Um arquivo de log",
-          "Uma cópia de segurança de informações",
-          "Um tipo de vírus de computador",
-          "Um protocolo de rede"
-        ],
-        "resposta": "Uma cópia de segurança de informações"
-      },
-      {
-        "pergunta": "Qual linguagem de programação é amplamente usada para desenvolver páginas web interativas?",
-        "alternativas": ["Java", "Python", "JavaScript", "C++"],
-        "resposta": "JavaScript"
-      },
-      {
-        "pergunta": "O que significa 'CPU'?",
-        "alternativas": [
-          "Central Processing Unit",
-          "Computer Personal Unit",
-          "Control Panel Unit",
-          "Central Personal Unit"
-        ],
-        "resposta": "Central Processing Unit"
-      },
-      {
-        "pergunta": "Qual destes é um serviço de armazenamento em nuvem oferecido pela Google?",
-        "alternativas": [
-          "iCloud",
-          "Dropbox",
-          "Google Drive",
-          "OneDrive"
-        ],
-        "resposta": "Google Drive"
-      },
-      {
-        "pergunta": "O que é um 'vírus de computador'?",
-        "alternativas": [
-          "Um tipo de software de segurança",
-          "Um dispositivo de armazenamento externo",
-          "Um programa que se replica e causa danos ao sistema",
-          "Um navegador de internet"
-        ],
-        "resposta": "Um programa que se replica e causa danos ao sistema"
-      },
-      {
-        "pergunta": "O que é um 'IP address'?",
-        "alternativas": [
-          "Um endereço de email",
-          "Um número de telefone",
-          "Um identificador único atribuído a um dispositivo na rede",
-          "Uma senha de acesso"
-        ],
-        "resposta": "Um identificador único atribuído a um dispositivo na rede"
-      },
-      {
-        "pergunta": "Qual destas não é uma linguagem de programação?",
-        "alternativas": ["HTML", "CSS", "MySQL", "Photoshop"],
-        "resposta": "Photoshop"
-      }
-    ]
-  },{
-    "id": "4",
-    "materia": "Historia",
-    "idMateria": "5",
-    "perguntas": [
-      {
-        "pergunta": "Quem foi o primeiro imperador romano?",
-        "alternativas": [
-          "Júlio César",
-          "Augusto",
-          "Nero",
-          "Marco Aurélio"
-        ],
-        "resposta": "Augusto"
-      },
-      {
-        "pergunta": "Qual foi a guerra entre os estados do norte e do sul dos Estados Unidos na década de 1860?",
-        "alternativas": [
-          "Guerra das Rosas",
-          "Guerra Fria",
-          "Guerra Civil Americana",
-          "Guerra Revolucionária Americana"
-        ],
-        "resposta": "Guerra Civil Americana"
-      },
-      {
-        "pergunta": "Quem foi o líder do movimento de independência da Índia e defensor da não violência?",
-        "alternativas": [
-          "Nelson Mandela",
-          "Mahatma Gandhi",
-          "Winston Churchill",
-          "Martin Luther King Jr."
-        ],
-        "resposta": "Mahatma Gandhi"
-      },
-      {
-        "pergunta": "Qual foi a capital do Império Romano do Ocidente antes de sua queda?",
-        "alternativas": [
-          "Roma",
-          "Constantinopla",
-          "Atenas",
-          "Cartago"
-        ],
-        "resposta": "Roma"
-      },
-      {
-        "pergunta": "Qual foi o evento que marcou o início da Revolução Francesa em 1789?",
-        "alternativas": [
-          "A Revolta dos Camponeses",
-          "O Julgamento de Luís XVI",
-          "A Queda da Bastilha",
-          "O Reinado do Terror"
-        ],
-        "resposta": "A Queda da Bastilha"
-      },
-      {
-        "pergunta": "Quem foi o líder da União Soviética durante a maior parte da Guerra Fria?",
-        "alternativas": [
-          "Vladimir Putin",
-          "Josef Stalin",
-          "Mikhail Gorbachev",
-          "Leon Trotsky"
-        ],
-        "resposta": "Josef Stalin"
-      },
-      {
-        "pergunta": "Qual foi a civilização que construiu as famosas pirâmides no Egito?",
-        "alternativas": [
-          "Sumérios",
-          "Romanos",
-          "Egípcios",
-          "Gregos"
-        ],
-        "resposta": "Egípcios"
-      },
-      {
-        "pergunta": "Quem foi o primeiro presidente dos Estados Unidos?",
-        "alternativas": [
-          "Benjamin Franklin",
-          "Thomas Jefferson",
-          "George Washington",
-          "John Adams"
-        ],
-        "resposta": "George Washington"
-      },
-      {
-        "pergunta": "Qual foi o tratado que encerrou a Primeira Guerra Mundial?",
-        "alternativas": [
-          "Tratado de Tordesilhas",
-          "bratado de Versalhes",
-          "Tratado de Viena",
-          "Tratado de Londres"
-        ],
-        "resposta": "Tratado de Versalhes"
-      },
-      {
-        "pergunta": "Qual foi a dinastia que governou a China por mais de 2.000 anos?",
-        "alternativas": ["Han", "Tang", "Qing", "Ming"],
-        "resposta": "Han"
-      }
-    ]
   }
 ]
