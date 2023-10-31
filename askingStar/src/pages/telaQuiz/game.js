@@ -27,20 +27,17 @@ const Quiz = ({ navigation, route }) => {
 
   //   }
 
-
-  
-  const [listQuestions, setListQuestions] = React.useState([])
+  const [listQuestions, setListQuestions] = React.useState([]);
   console.log(listQuestions);
   const [perguntaAtual, setPerguntaAtual] = useState(0);
-  const [finishGame, setFinishGame] = useState(false)
+  const [finishGame, setFinishGame] = useState(false);
   const [pontos, setPontos] = React.useState(0);
-  
+
   function handleFinishGame() {
     navigation.navigate("QuizConcluido", {
       pontos: pontos,
-      numQuestions: data.length
+      numQuestions: data.length,
     });
-
   }
 
   const handleNextQuestion = () => {
@@ -48,60 +45,59 @@ const Quiz = ({ navigation, route }) => {
       setPerguntaAtual(perguntaAtual + 1);
     } else {
       // Você chegou ao final das perguntas, pode mostrar uma mensagem ou fazer algo aqui.
-      setFinishGame(true)
+      setFinishGame(true);
       return;
     }
   };
-  
-  React.useEffect( () =>{
-    
-    const idMateria = route.params
-    data.map( (item) => {
-        if(item.idMateria == idMateria)
-        return setListQuestions(item.perguntas)
-      })
 
-  },[])
-
+  React.useEffect(() => {
+    //Confere a materia escolhida
+    const idMateria = route.params;
+    data.map((item) => {
+      if (item.idMateria == idMateria) return setListQuestions(item.perguntas);
+    });
+  }, []);
 
   useEffect(() => {
-    if (finishGame)
-      handleFinishGame()
-  }, [finishGame])
+    if (finishGame) handleFinishGame();
+  }, [finishGame]);
 
   return (
-
-    <View style={{
-      backgroundColor: '#04154F',
-      flex: 1,
-    }}>
-
-
-
-
-      <View style={{
-        alignItems: 'stretch',
-        textAling: "center",
-        backgroundColor: "#102261",
-        height: "8%",
-        justifyContent: "center",
-        //marginTop: Constants.statusBarHeight,
-        padding: 20,
-        width: "100%"
-      }}>
-
-        <Text style={{
-          fontSize: 25,
-          color: "white",
-        }}>Matématica </Text>
-
+    <View
+      style={{
+        backgroundColor: "#04154F",
+        flex: 1,
+      }}
+    >
+      <View
+        style={{
+          alignItems: "stretch",
+          textAling: "center",
+          backgroundColor: "#102261",
+          height: "8%",
+          justifyContent: "center",
+          //marginTop: Constants.statusBarHeight,
+          padding: 20,
+          width: "100%",
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 25,
+            color: "white",
+          }}
+        >
+          Matématica{" "}
+        </Text>
       </View>
 
-      <View style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: "center",
-      }}>
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         {perguntaAtual < data.length ? (
           <QuestionScreen
             pergunta={data[perguntaAtual].pergunta}
@@ -109,19 +105,14 @@ const Quiz = ({ navigation, route }) => {
             respostaCorreta={data[perguntaAtual].resposta}
             onNext={handleNextQuestion}
             setPontos={setPontos}
-            pontos={pontos} />
+            pontos={pontos}
+          />
         ) : (
           <Text>Você concluiu todas as perguntas!</Text>
         )}
       </View>
-
-
-
     </View>
-
   );
-
-
 };
 
 export default Quiz;

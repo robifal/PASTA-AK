@@ -5,7 +5,7 @@ import Perguntas from "./src/pages/CadastroPerguntas/index";
 import Quiz from "./src/pages/telaQuiz/game";
 import TelaJogar from "./src/pages/telaJogar/telaJogar";
 import TelaMateria from "./src/pages/telaMateria/telaMateria";
-import TelaQuizConcluido from "./src/pages/telaQuizConcluido/telaQuizConcluido"
+import TelaQuizConcluido from "./src/pages/telaQuizConcluido/telaQuizConcluido";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StatusBar } from "react-native";
@@ -18,7 +18,7 @@ const App = () => {
       <StatusBar barStyle={"dark-content"} />
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Game"
+          initialRouteName=""
           screenOptions={{
             headerShown: false,
           }}
@@ -36,10 +36,8 @@ const App = () => {
           <Stack.Screen name="Game" component={Quiz} />
 
           <Stack.Screen name="Perguntas" component={Perguntas} />
-           
-          <Stack.Screen name="QuizConcluido" component={TelaQuizConcluido} />
 
-          
+          <Stack.Screen name="QuizConcluido" component={TelaQuizConcluido} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
